@@ -10,8 +10,8 @@ function Header() {
               <Link href="/" passHref><Navbar.Brand><img src='https://kaspi.kz/img/Logo.svg'/></Navbar.Brand></Link>
                   <Nav className="me-auto">
                       <Link href="/" passHref><Nav.Link >На главную</Nav.Link></Link>
-                      <Link  href="/bizkredit" passHref><Nav.Link >Бизнес</Nav.Link></Link>
-                      <Nav.Link href="#pricing">Pricing</Nav.Link>
+                      <Link href="/bizkredit" passHref><Nav.Link >Бизнес</Nav.Link></Link>
+                      <Link href="/kaspiGuide" passHref><Nav.Link >Kaspi Гид</Nav.Link></Link>
                   </Nav>
               </Container>
           </Navbar>

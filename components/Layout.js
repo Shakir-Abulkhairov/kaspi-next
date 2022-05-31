@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Header from './Header/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Footer/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function Layout({children}) {
   return (
     <>  

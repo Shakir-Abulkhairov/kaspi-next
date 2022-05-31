@@ -1,0 +1,12 @@
+.wrapper{
+    padding: 95px 0 93px 0;
+}
+.img{
+    width: 843px;
+    height: 354px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.img img{
+    width: 100%;
+}

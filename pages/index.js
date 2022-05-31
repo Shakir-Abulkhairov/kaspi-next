@@ -1,5 +1,3 @@
-import styles from '../styles/Home.module.css'
-import { Container } from 'react-bootstrap';
 import { Promo, Services, KaspiShop } from '../components';
 import { useTranslations } from 'next-intl';
 export default function Home({ product }) {

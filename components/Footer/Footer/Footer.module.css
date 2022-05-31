@@ -4,8 +4,9 @@
 
 }
 .section{
-    display: flex;
-    justify-content: space-between;
+   text-align:center;
+   display:flex;
+   justify-content:center;
 }
 .left{
     max-width: 600px;

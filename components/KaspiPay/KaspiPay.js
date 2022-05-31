@@ -1,5 +1,5 @@
 import {Container} from 'react-bootstrap';
-import style from '../../styles/KaspiPay/KaspiPay.module.css';
+import style from './KaspiPay/KaspiPay.module.css';
 import {KaspiTerminal,KaspiPartner} from './';
 
 

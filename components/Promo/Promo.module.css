@@ -1,0 +1,9 @@
+.wrapper{
+    padding: 96px 0 32px 0 ;
+    height: 380px;
+    background: #f0f0f0;  
+}
+.img{
+    max-width:290px;
+    height: 283px;
+}

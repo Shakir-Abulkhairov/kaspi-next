@@ -1,6 +1,6 @@
 import {Container} from 'react-bootstrap';
-import style from '../styles/KaspiShop.module.css';
-import SliderBootstrap from './SliderBootstrap/SliderBootstrap';
+import style from './KaspiShop.module.css';
+import SliderBootstrap from '../SliderBootstrap/SliderBootstrap';
 function KaspiShop() {
   return (
     <div className={style.wrapper}>

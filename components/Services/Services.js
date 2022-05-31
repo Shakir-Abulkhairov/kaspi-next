@@ -1,7 +1,7 @@
 import {Container} from 'react-bootstrap';
-import SliderCard from './Slider/SliderCard';
+import SliderCard from '../Slider/SliderCard';
 // import ReactCardSlider from 'react-card-slider-component';
-import style from '../styles/Services.module.css';
+import style from './Services.module.css';
 function Services({messages}) {
     
   return (

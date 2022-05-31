@@ -1,7 +1,7 @@
 import { Container } from 'react-bootstrap';
 import Left from './Left';
 import Right from './Right';
-import style from '../../styles/Business/Business.module.css';
+import style from './Business/Business.module.css';
 
 function Business() {
   return (

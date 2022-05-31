@@ -1,5 +1,5 @@
 import {Container} from 'react-bootstrap';
-import style from '../../styles/Qr/Qr.module.css';
+import style from './Qr/Qr.module.css';
 
 export default function Qr() {
   return (

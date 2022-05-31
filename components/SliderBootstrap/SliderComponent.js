@@ -1,4 +1,4 @@
-import style from '../../styles/slider-bootstrap/SliderComponent.module.css';
+import style from './slider-bootstrap/SliderComponent.module.css';
 
 function SliderComponent() {
   return (

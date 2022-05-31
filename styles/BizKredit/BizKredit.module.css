@@ -1,0 +1,27 @@
+.wrapper{
+    padding: 95px 0 93px 0;
+}
+
+.bizBlock{
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+}
+.link{
+    display: block;
+    width: 200px;
+    height: 48px;
+    background: #0089D0;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 48px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+}
+.faq , .accor{
+    text-align: left;
+    font-weight: normal;
+    margin-top: 60px;
+}

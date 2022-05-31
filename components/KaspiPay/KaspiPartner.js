@@ -1,4 +1,4 @@
-import style from '../../styles/KaspiPay/KaspiPartner.module.css';
+import style from './KaspiPay/KaspiPartner.module.css';
 
 function KaspiPartner() {
   return (

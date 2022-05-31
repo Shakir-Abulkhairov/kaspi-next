@@ -1,15 +1,16 @@
 import {Navbar,Container,Nav} from 'react-bootstrap';
-import style from '../styles/Header.module.css';
+import style from './Header.module.css';
+import Link from 'next/link';
 import Image from 'next/image';
 function Header() {
   return (
     <>
           <Navbar bg="light" variant="light" fixed="top" className={style.navBar}>
               <Container>
-                  <Navbar.Brand href="#home"><img src='https://kaspi.kz/img/Logo.svg'/></Navbar.Brand>
+              <Link href="/" passHref><Navbar.Brand><img src='https://kaspi.kz/img/Logo.svg'/></Navbar.Brand></Link>
                   <Nav className="me-auto">
-                      <Nav.Link href="#home">Home</Nav.Link>
-                      <Nav.Link href="#features">Features</Nav.Link>
+                      <Link href="/" passHref><Nav.Link >На главную</Nav.Link></Link>
+                      <Link  href="/bizkredit" passHref><Nav.Link >Бизнес</Nav.Link></Link>
                       <Nav.Link href="#pricing">Pricing</Nav.Link>
                   </Nav>
               </Container>

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../styles/SliderCard.module.scss';
+import style from './SliderCard.module.scss';
 
 const Card = (props) => (
     <div className={style.card}>
@@ -15,8 +15,9 @@ const Card = (props) => (
   const CardContainer = (props) => (
     <div className={style.cardsContainer}>
       {
-        props.cards.map((card) => (
+        props.cards.map((card,id) => (
           <Card title={ card.title }
+            key={id}
             content={ card.content }
             imgUrl={ card.imgUrl } />
         ))

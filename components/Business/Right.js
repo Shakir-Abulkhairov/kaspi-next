@@ -1,4 +1,4 @@
-import style from '../../styles/Business/Right.module.css';
+import style from './Business/Right.module.css';
 function Right() {
   return (
     <div className={style.products}>

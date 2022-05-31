@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Header from './Header';
+import Header from './Header/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Footer/Footer';
 function Layout({children}) {

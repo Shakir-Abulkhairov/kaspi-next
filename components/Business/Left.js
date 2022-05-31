@@ -1,4 +1,4 @@
-import style from '../../styles/Business/Left.module.css';
+import style from './Business/Left.module.css';
 
 function Left() {
   return (

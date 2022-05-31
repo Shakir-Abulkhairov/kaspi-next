@@ -1,0 +1,39 @@
+.item{
+    border-radius: 20px;
+    background-color: #fff;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+
+.products .item:first-child {
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+.title{
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(0,0,0,.6);
+}
+.details {
+    margin: 16px 0 28px;
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.description {
+    font-size: 30px;
+    color: #000;
+    line-height: 36px;
+    align-self: baseline;
+    max-width: 350px;
+}
+.action{
+    margin-top: auto;
+    line-height: 24px;
+    font-size: 20px;
+}

@@ -1,0 +1,17 @@
+.wrapper{
+    margin: 100px 0;
+}
+.blockImg{
+    text-align: center;
+    margin: 60px auto 0;
+    display: flex;
+    justify-content: center;
+    padding: 33px;
+    background: #fff;
+    border-radius: 24px;
+    max-width: 400px;
+}
+.img{
+    width: 334px;
+    -webkit-user-drag: none;
+}

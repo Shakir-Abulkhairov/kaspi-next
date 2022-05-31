@@ -8,9 +8,8 @@ function AccordionFAQ({ ques }) {
     <>
       <Accordion alwaysOpen >
         {ques.map((question) => {
-          console.log(question)
           return (
-            <Accordion.Item eventKey={[`${question.id}`]}>
+            <Accordion.Item eventKey={[`${question.id}`]} key={question.id}>
               <Accordion.Header>{question.question}</Accordion.Header>
               <Accordion.Body>
                 {question.answer}

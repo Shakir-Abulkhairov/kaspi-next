@@ -1,19 +1,20 @@
-import {NextIntlProvider} from 'next-intl';
+import { NextIntlProvider } from 'next-intl';
 import Layout from '../components/Layout';
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
+  console.log(pageProps)
   return (
     <>
-    <NextIntlProvider messages={pageProps.messages}>
+      <NextIntlProvider messages={pageProps.messages}>
         <Layout>
-            <Component {...pageProps} />
+          <Component {...pageProps} />
         </Layout>
       </NextIntlProvider>
     </>
   )
 }
-export async function getStaticProps({locale}) {
+export async function getStaticProps({ locale }) {
   return {
     props: {
       messages: (await import(`../lang/${locale}.json`)).default

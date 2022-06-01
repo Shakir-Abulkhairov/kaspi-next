@@ -1,8 +1,6 @@
 import Head from 'next/head';
-import Header from './Header/Header';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Header/Header';;
 import Footer from './Footer/Footer';
-import 'bootstrap/dist/css/bootstrap.min.css';
 const Layout = ({ children }) => {
   return (
     <>
@@ -13,6 +11,7 @@ const Layout = ({ children }) => {
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
           crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       </Head>
       <Header />
       {children}
@@ -20,5 +19,6 @@ const Layout = ({ children }) => {
     </>
   )
 }
+
 
 export default Layout

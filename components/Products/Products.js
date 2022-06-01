@@ -1,11 +1,11 @@
-import { Container } from "react-bootstrap"
+
 import Link from "next/link";
 import style from './Products.module.css';
 function Products({ products }) {
 
     return (
         <>
-            <Container>
+            <div className="container">
                 <h2 className="title">
                     Продукты Kaspi.kz
                 </h2>
@@ -42,7 +42,7 @@ function Products({ products }) {
                         })
                     }
                 </div>
-            </Container>
+            </div>
         </>
     )
 }

@@ -1,11 +1,10 @@
-import { Container, Accordion } from 'react-bootstrap';
 import AccordionFAQ from '../components/accordion/AccordionFAQ';
 import style from '../styles/BizKredit/BizKredit.module.css';
 function Bizkredit({ ques }) {
     return (
         <>
             <div className={style.wrapper}>
-                <Container>
+                <div className='container'>
                     <div className={style.bizBlock}>
                         <img src='https://kaspi.kz/img/biz-kredit-main.svg' className={style.img} />
                         <p className={style.text}>
@@ -21,7 +20,7 @@ function Bizkredit({ ques }) {
                         </div>
                     </div>
 
-                </Container>
+                </div>
             </div>
         </>
     )

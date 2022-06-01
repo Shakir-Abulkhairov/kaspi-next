@@ -1,5 +1,8 @@
 .sliderBlock{
-  width: 359px;
-  height:260px;
+  width: 500px;
   margin: 0 auto;
+  color: black;
+}
+.carousel-item:first-child{
+  
 }

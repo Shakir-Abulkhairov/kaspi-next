@@ -1,9 +1,12 @@
 import { NextIntlProvider } from 'next-intl';
+import { useEffect } from 'react';
 import Layout from '../components/Layout';
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  console.log(pageProps)
+  useEffect(() => {
+    import("bootstrap/dist/js/bootstrap");
+  }, []);
   return (
     <>
       <NextIntlProvider messages={pageProps.messages}>
@@ -21,4 +24,5 @@ export async function getStaticProps({ locale }) {
     }
   };
 }
+
 export default MyApp

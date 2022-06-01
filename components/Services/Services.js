@@ -1,16 +1,13 @@
-import { Container } from 'react-bootstrap';
-import SliderCard from '../Slider/SliderCard';
-// import ReactCardSlider from 'react-card-slider-component';
 import style from './Services.module.css';
 function Services() {
 
   return (
     <>
       <div className={style.wrapper}>
-        <Container>
+        <div className='container'>
           <h2 className='title'>Сервисы Kaspi.kz</h2>
-          <SliderCard />
-        </Container>
+
+        </div>
       </div>
     </>
   )

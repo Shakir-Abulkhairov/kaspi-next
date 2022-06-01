@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { Container } from 'react-bootstrap';
+
 import AccordionFAQ from '../components/accordion/AccordionFAQ';
 import Image from 'next/image';
 import style from '../styles/KaspiGuide.module.css';
@@ -7,7 +7,7 @@ function KaspiGuide({ ques }) {
   return (
     <>
       <div className={style.wrapper}>
-        <Container>
+        <div className='container'>
           <h2 className='title'>Kaspi Гид</h2>
           <div className='subtitle'>расскажем все о наших продуктах и сервисах</div>
           <div className={cn(style.img, 'mt-5')}>
@@ -18,7 +18,7 @@ function KaspiGuide({ ques }) {
           <div className='accordion'>
             <AccordionFAQ ques={ques} />
           </div>
-        </Container>
+        </div>
       </div>
     </>
   )

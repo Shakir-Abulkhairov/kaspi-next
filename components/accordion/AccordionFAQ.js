@@ -1,4 +1,3 @@
-import { Accordion } from 'react-bootstrap'
 
 function AccordionFAQ({ ques }) {
   // const { question, answer, id } = ques;
@@ -6,19 +5,25 @@ function AccordionFAQ({ ques }) {
 
   return (
     <>
-      <Accordion alwaysOpen >
+      <div className="accordion" id="accordionPanelsStayOpenExample" >
         {ques.map((question) => {
           return (
-            <Accordion.Item eventKey={[`${question.id}`]} key={question.id}>
-              <Accordion.Header>{question.question}</Accordion.Header>
-              <Accordion.Body>
-                {question.answer}
-              </Accordion.Body>
-            </Accordion.Item>
+            <div className="accordion-item" key={question.id}>
+              <h2 className="accordion-header" id="panelsStayOpen-headingOne">
+                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  {question.question}
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                <div className="accordion-body">
+                  {question.answer}
+                </div>
+              </div>
+            </div>
           )
         })
         }
-      </Accordion >
+      </div >
     </>
   )
 

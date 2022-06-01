@@ -18,7 +18,6 @@
     "next-intl": "^2.7.4",
     "node-sass": "^7.0.1",
     "react": "18.1.0",
-    "react-card-slider-component": "^1.0.9",
     "react-dom": "18.1.0"
   },
   "devDependencies": {

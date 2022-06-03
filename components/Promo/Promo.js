@@ -5,11 +5,11 @@ function Promo() {
     <>
       <div className={style.wrapper}>
         <div className='container' >
-          <div className='row'>
-            <div className='col-md-7'>
+          <div className={style.content}>
+            <div >
               <Image src='https://kaspi.kz/img/main_logo.svg' width={760} height={160} />
             </div>
-            <div className='col-md-5'>
+            <div >
               <img src='https://kaspi.kz/img/phone-2x.png' className={style.img} />
             </div>
           </div>

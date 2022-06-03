@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import style from './NavBar.module.css';
 
 function NavBar({ product }) {
@@ -8,25 +9,24 @@ function NavBar({ product }) {
       <div className={style.wrapper}>
         <div className='container'>
           <nav className={style.nav}>
-            <div className={style.nav__inner}>
-              <ul className={style.nav__list}>
-                {
-                  product.map((item, i) => {
-                    return (
-                      <li className={style.nav__item} key={i}>
-                        <Link href={`/${item}`}>
-                          <a className={style.nav__link}>
-                            <span className={style.nav__text}>
-                              {item}
-                            </span>
-                          </a>
-                        </Link>
-                      </li>
-                    )
-                  })
-                }
-              </ul>
-            </div>
+            <ul className={style.nav__list}>
+              {
+                product.map((item, i) => {
+                  return (
+                    <li className={style.nav__item} key={i}>
+                      <Link href={`/cat/${item.id}`}>
+                        <a className={style.nav__link}>
+                          <span className={style.nav__text} >
+                            {item.name}
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                  )
+                })
+              }
+
+            </ul>
           </nav>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import style from './KaspiShop.module.css';
 import SliderBootstrap from '../SliderBootstrap/SliderBootstrap';
-function KaspiShop({ product }) {
+function KaspiShop({ product = [] }) {
   return (
     <div className={style.wrapper}>
       <div className='container'>

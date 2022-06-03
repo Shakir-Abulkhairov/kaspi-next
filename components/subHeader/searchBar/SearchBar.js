@@ -15,7 +15,16 @@ function searchBar() {
               <span className={style.search_bar_icon}>
               </span>
             </button>
+            <div className={style.dropdown}>
+              <button className={style.dropbtn}>Dropdown</button>
+              <div className={style.dropdown_content}>
+                <a className={style.dropdown_link} href="#">Link 1</a>
+                <a className={style.dropdown_link} href="#">Link 2</a>
+                <a className={style.dropdown_link} href="#">Link 3</a>
+              </div>
+            </div>
           </div>
+
         </form>
       </div>
     </div>

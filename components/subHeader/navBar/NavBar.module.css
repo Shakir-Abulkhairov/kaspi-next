@@ -4,15 +4,12 @@
 }
 .nav{
   border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   background: #fff;
   position: relative;
-}
-.nav__inner {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 960px;
-  margin-bottom: 0;
 }
 .nav__list {
   list-style: none;

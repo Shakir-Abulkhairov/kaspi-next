@@ -33,15 +33,3 @@ a {
     font-weight: normal;
     margin-top: 60px;
 }
-.ratings {
-  margin-right: 10px;
-}
-
-.ratings i {
-  color: #cecece;
-  font-size: 12px;
-}
-
-.rating-color {
-  color: #fbc634 !important;
-}

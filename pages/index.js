@@ -1,10 +1,9 @@
 import { Promo, Services, KaspiShop, SubHeader } from '../components';
-import { useTranslations } from 'next-intl';
 export default function Home({ product }) {
-  const t = useTranslations('home');
+  console.log(product)
   return (
     <>
-      <SubHeader product={product} />
+      <SubHeader product={product.category} />
       <Promo />
       <Services />
       <KaspiShop product={product} />
@@ -12,10 +11,13 @@ export default function Home({ product }) {
     </>
   )
 }
-export async function getStaticProps() {
+
+export async function getServerSideProps() {
+
   try {
-    const response = await fetch('https://fakestoreapi.com/products/categories');
-    const body = await response.json();
+    const res = await fetch('http://localhost:3000/api/producrApi/get-top-cat-list');
+    const body = await res.json();
+
     if (!body) {
       return {
         notFound: true,
@@ -29,8 +31,9 @@ export async function getStaticProps() {
   } catch (e) {
     return {
       props: {
-        ques: null
+        product: null
       }
     }
   }
+
 }

@@ -1,47 +1,25 @@
-
-import Link from "next/link";
+import cn from 'classnames';
+import RaitingStar from '../Rating-Star/RatingStar';
 import style from './Products.module.css';
 function Products({ products }) {
 
     return (
         <>
-            <div className="container">
-                <h2 className="title">
-                    Продукты Kaspi.kz
-                </h2>
-                <div className={style.wrapper} key={products.id}>
-                    {
-                        products.map((product) => {
-                            return (
-
-                                <div className={style.cards}>
-                                    <a className={style.item}>
-                                        <div className={style.title}>
-                                            {product.title}
-                                        </div>
-                                        <div className={style.details}>
-                                            <div className={style.description}>
-                                                {product.text}
-                                            </div>
-                                            <div className={style.img}>
-                                                <img src={product.img} />
-                                            </div>
-                                        </div>
-                                        <div className={style.action}>
-                                            <div>
-                                                <Link href={`${product.srcLink}`}>
-                                                    <a>
-                                                        {product.link}
-                                                    </a>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            )
-                        })
-                    }
+            <div className={style.card}  >
+                <div className={style.imgBlock} >
+                    <img className={cn("card-img-top", style.img)} src={products.image} alt="Card image cap" />
                 </div>
+                <div className={style.card__body}>
+                    <div className="card-title">{products.title}</div>
+                </div>
+                <ul className={style.card__block}>
+                    <li className={style.card__item}>{products.price}$</li>
+                    <div className="ratings">
+                        <RaitingStar data={products} />
+                    </div>
+                    <li className={style.card__item}>Число оценивших: {products.rating.count}</li>
+                    <li className={style.card__item}>Категория: {products.category}</li>
+                </ul>
             </div>
         </>
     )

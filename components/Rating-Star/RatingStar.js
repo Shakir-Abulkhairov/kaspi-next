@@ -5,7 +5,9 @@ function RatingStar({ data }) {
   return (
     [...Array(Math.floor(data.rating.rate))].map((item, index) => {
       return (
-        <span key={index}> <i className={cn("fa fa-star ", style.rating_color)} ></i></span>
+        <span key={index}>
+          <i className={cn("fa fa-star ", style.rating_color)} ></i>
+        </span>
       );
     })
   )

@@ -2,10 +2,10 @@ import NavBar from './navBar/NavBar';
 import SeacrchBar from './searchBar/SearchBar';
 import style from './SubHeader.module.css';
 
-function SubHeader({ product }) {
+function SubHeader({ product, cities }) {
   return (
     <>
-      <SeacrchBar />
+      <SeacrchBar cities={cities} />
       <NavBar product={product} />
     </>
   )

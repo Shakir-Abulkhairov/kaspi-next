@@ -47,16 +47,16 @@ function SliderBootstrap({ product }) {
             })
           }
  */}
-          <div class="carousel-item active">
+          <div className="carousel-item active">
             <img src="https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h7a/h0e/48375283089438/back-magic-support-bm07-103093603-1.jpg" className="d-block w-100" alt="..." />
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img src="https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h7a/h0e/48375283089438/back-magic-support-bm07-103093603-1.jpg" className="d-block w-100" alt="..." />
           </div>
-          <div class="carousel-item ">
+          <div className="carousel-item ">
             <img src="https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h7a/h0e/48375283089438/back-magic-support-bm07-103093603-1.jpg" className="d-block w-100" alt="..." />
           </div>
-          <div class="carousel-item ">
+          <div className="carousel-item ">
             <img src="https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h7a/h0e/48375283089438/back-magic-support-bm07-103093603-1.jpg" className="d-block w-100" alt="..." />
           </div>
 

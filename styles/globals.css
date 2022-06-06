@@ -12,6 +12,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 * {
@@ -32,4 +33,7 @@ a {
    text-align: left;
     font-weight: normal;
     margin-top: 60px;
+}
+.active {
+  color: #ffd300;
 }

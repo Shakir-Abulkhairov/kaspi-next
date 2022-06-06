@@ -1,5 +1,5 @@
 .wrapper {
-  padding: 70px 0 23px 0;
+  padding: 40px 0 23px 0;
 }
 
 /* .form {
@@ -54,43 +54,15 @@
   width: 18px;
   height: 17px;
 }
-.dropbtn {
-  /* background-color: #04AA6D; */
-  color: white;
-  /* padding: 16px; */
-  font-size: 16px;
-  border: none;
+
+.link{
+  margin-left: 13px;
+}
+.link:hover{
+  color:black;
+}
+.city__link {
+  color: #0089d0;
+  border-bottom: 1px dashed #0089d0;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown_content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown_link {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown_link:hover {
-  background-color: #ddd;
-}
-
-.dropdown:hover .dropdown_content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}

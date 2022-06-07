@@ -1,5 +1,6 @@
 import { Promo, Services, KaspiShop, SubHeader } from '../components';
 export default function Home({ product, cities }) {
+  console.log(cities)
   return (
     <>
       <SubHeader product={product.category} cities={cities} />

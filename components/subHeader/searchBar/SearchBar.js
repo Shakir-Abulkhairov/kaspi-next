@@ -18,7 +18,7 @@ function searchBar({ cities }) {
   };
   const changeCityName = (nameCity) => {
     setNameCity(nameCity);
-    // setVisiblePopup(false);
+    setVisiblePopup(false);
   }
 
 

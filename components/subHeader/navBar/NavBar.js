@@ -11,7 +11,7 @@ function NavBar({ product }) {
           <nav className={style.nav}>
             <ul className={style.nav__list}>
               {
-                product.map((item, i) => {
+                product && product.map((item, i) => {
                   return (
                     <li className={style.nav__item} key={i}>
                       <Link href={`/cat/${item.id}`}>
@@ -28,7 +28,18 @@ function NavBar({ product }) {
 
             </ul>
           </nav>
+          <div className={style.items}>
+            <div className={style.item}></div>
+            <div className={style.item}></div>
+            <div className={style.item}></div>
+            <div className={style.item}></div>
+            <div className={style.item}></div>
+            <div className={style.item}></div>
+            <div className={style.item}></div>
+            <div className={style.item}></div>
+          </div>
         </div>
+
       </div>
     </>
   )

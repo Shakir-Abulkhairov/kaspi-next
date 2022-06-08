@@ -25,7 +25,7 @@ function Modal({ toggleVisiblePopupClose, changeCityName, isActive, setIsActive 
           </div>
           <h1 className='title'>Выберите Ваш город</h1>
           <div className={style.modal__cities}>
-            <ul className={style.block__link}>
+            <ul className={cn(style.block__link,)}>
               {
                 isActive.cities.map(city => {
                   return (
@@ -35,7 +35,7 @@ function Modal({ toggleVisiblePopupClose, changeCityName, isActive, setIsActive 
                         changeCityName(city.name);
                         handleClick(city.id);
                       }}
-                      className={cn(style.city__link, toggleActiveStyle(city.id))}
+                      className={cn(style.city__link, toggleActiveStyle(city.id),)}
                     ><Link href='/'><a>{city.name}</a></Link></li>
                   )
                 })

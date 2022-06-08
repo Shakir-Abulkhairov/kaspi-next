@@ -12,3 +12,11 @@
     justify-content:space-between;
     align-items: center;
 }
+@media (max-width: 768px) {
+    .img{
+        display:none;
+    }
+    .wrapper{
+        height: 280px;
+    }
+}

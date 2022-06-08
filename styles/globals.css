@@ -38,3 +38,9 @@ a {
 .active {
   color: #ffd300;
 }
+
+@media (max-width: 768px) {
+  .title{
+      font-size: 37px;
+  }
+}

@@ -9,7 +9,7 @@ function Promo() {
             <div >
               <Image src='https://kaspi.kz/img/main_logo.svg' width={760} height={160} />
             </div>
-            <div >
+            <div>
               <img src='https://kaspi.kz/img/phone-2x.png' className={style.img} />
             </div>
           </div>

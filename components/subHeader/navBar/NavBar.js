@@ -7,13 +7,13 @@ function NavBar({ product }) {
   return (
     <>
       <div className={style.wrapper}>
-        <div className='container'>
+        <div className={style.container}>
           <nav className={style.nav}>
-            <ul className={style.nav__list}>
+            <div className={style.nav__list}>
               {
                 product && product.map((item, i) => {
                   return (
-                    <li className={style.nav__item} key={i}>
+                    <div className={style.nav__item} key={i}>
                       <Link href={`/cat/${item.id}`}>
                         <a className={style.nav__link}>
                           <span className={style.nav__text} >
@@ -21,24 +21,17 @@ function NavBar({ product }) {
                           </span>
                         </a>
                       </Link>
-                    </li>
+                    </div>
                   )
                 })
               }
 
-            </ul>
+            </div>
           </nav>
-          <div className={style.items}>
-            <div className={style.item}></div>
-            <div className={style.item}></div>
-            <div className={style.item}></div>
-            <div className={style.item}></div>
-            <div className={style.item}></div>
-            <div className={style.item}></div>
-            <div className={style.item}></div>
-            <div className={style.item}></div>
-          </div>
         </div>
+
+      </div>
+      <div className={style.sticky__box}>
 
       </div>
     </>

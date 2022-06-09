@@ -1,11 +1,11 @@
 .wrapper{
-    padding: 96px 0 32px 0 ;
-    height: 380px;
+    padding: 5em 0 2em 0 ;
+    height: 23.75em;
     background-color: rgb(241, 70, 53);     
 }
 .img{
-    max-width:290px;
-    height: 283px;
+    max-width:18.125em;
+    height: 18.730em;
 }
 .content{
     display:flex;
@@ -17,6 +17,6 @@
         display:none;
     }
     .wrapper{
-        height: 280px;
+        height: 17.5em;
     }
 }

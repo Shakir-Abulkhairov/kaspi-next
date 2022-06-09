@@ -1,33 +1,33 @@
 
 
 .card {
-    margin-top: 13px;
+    margin-top: 0.8125em;
     float: left;
-    width: 240px;
+    width: 15em;
     border: 1px solid #e5e5e5;
     background: #fff;
-    padding: 21px 14px 0;
+    padding: 1.3125em 0.875em 0;
     margin-bottom: -1px;
     box-sizing: border-box;
-    font-size: 13px;
-    height: 390px;
+    font-size: 0.8125em;
+    height: 24.375em;
 }
 
 .imgBlock {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 211px;
-    height: 150px;
+    width: 13.1875em;
+    height: 9.375em;
 }
 
 .img {
-    width: 100px;
+    width: 6.25em;
 }
 
 .card__body {
-    margin: 10px 0 10px 0;
-    height: 70px;
+    margin:0.625em 0 ;
+    height: 4.375em;
 }
 
 .card__item {

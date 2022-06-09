@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Header from './Header/Header';
 import SubHeader from './subHeader/SubHeader';
 import Footer from './Footer/Footer';
-const Layout = ({ children, product, cities }) => {
+const Layout = ({ children, product, cities, change, confirm }) => {
 
   return (
     <>
@@ -16,7 +16,7 @@ const Layout = ({ children, product, cities }) => {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
       </Head>
       <Header />
-      <SubHeader product={product.category} cities={cities} />
+      <SubHeader product={product.category} cities={cities} change={change} confirm={confirm} />
       {children}
       <Footer />
     </>

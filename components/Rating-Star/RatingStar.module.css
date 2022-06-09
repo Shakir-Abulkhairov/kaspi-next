@@ -1,10 +1,10 @@
 .ratings {
-  margin-right: 10px;
+  margin-right: 0.625em;
 }
 
 .icon {
   color: #cecece;
-  font-size: 12px;
+  font-size: 0.75em;
 }
 
 .rating_color {

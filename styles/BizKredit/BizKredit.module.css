@@ -1,20 +1,20 @@
 .wrapper{
-    padding: 95px 0 93px 0;
+    padding: 5.9375em 0 ;
 }
 
 .bizBlock{
     text-align: center;
-    font-size: 23px;
+    font-size: 1.4375em;
     font-weight: bold;
 }
 .link{
     display: block;
-    width: 200px;
-    height: 48px;
+    width: 12.5em;
+    height: 3em;
     background: #0089D0;
     border-radius: 8px;
-    font-size: 20px;
-    line-height: 48px;
+    font-size: 1.25em;
+    line-height: 3em;
     color: #fff;
     text-decoration: none;
     text-align: center;
@@ -23,5 +23,5 @@
  .accor{
     text-align: left;
     font-weight: normal;
-    margin-top: 60px;
+    margin-top: 3.75em;
 }

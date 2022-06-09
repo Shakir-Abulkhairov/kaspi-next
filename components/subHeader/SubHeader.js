@@ -2,10 +2,10 @@ import NavBar from './navBar/NavBar';
 import SeacrchBar from './searchBar/SearchBar';
 import style from './SubHeader.module.css';
 
-function SubHeader({ product, cities }) {
+function SubHeader({ product, cities, change, confirm, setConfirm }) {
   return (
     <>
-      <SeacrchBar cities={cities} />
+      <SeacrchBar cities={cities} change={change} confirm={confirm} />
       <NavBar product={product} />
     </>
   )

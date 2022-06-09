@@ -1,5 +1,6 @@
 .wrapper {
-  padding: 135px 0 23px 0;
+  padding: 8.4375em 0 1.4375em 0;
+
 }
 
 /* .form {
@@ -12,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 318px;
+  max-width: 19.875em;
 }
 .search_bar_wrapper {
   display: flex;
@@ -21,9 +22,9 @@
 }
 
 .search_bar_input {
-  width: 285px;
+  max-width: 17.8125em;
   
-  height: 35px;
+  height: 2.1875em;
   padding: 0 10px;
   border: 1px solid #e5e5e5;
   border-radius: 2px;
@@ -35,8 +36,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 35px;
-  padding: 7px 21px;
+  height: 2.1875em;
+  padding: 0.4375em 1.3125em;
   border: 0;
   border-radius: 2px;
   background: #0089d0;
@@ -47,12 +48,13 @@
 /*=========city============*/
 .icon {
   background-image: url('https: //resources.cdn-kaspi.kz/shop/images/small-search.png');
-  width: 18px;
-  height: 17px;
+  width: 1.125em;
+  height: 1.0625em;
 }
 
 .link{
-  margin-left: 13px;
+  margin-left: 0.8125em;
+  font-weight: bold;
 }
 .link:hover{
   color:black;
@@ -60,23 +62,23 @@
 .city__link {
   color: #0089d0;
   border-bottom: 1px dashed #0089d0;
-  /* position: relative; */
+ 
 }
 /*==========confirm =================*/
 .current__location {
   color: #4a4a4a;
-  font-size: 17px;
+  font-size: 1.0625em;
   white-space: nowrap;
 }
 .confirm__city {
     display: block;
     position: absolute;
-    top: 71px;
-    right: 214px;
+    top: 4.4375em;
+    right: 24.75em;
     height: auto;
     z-index: 100;
-    min-width: 300px;
-    padding: 34px 28px;
+    min-width: 18.75em;
+    padding: 2.125em 1.75em;
     background: #fff;
     text-align: center;
     border: 1px solid #e5e5e5;
@@ -86,10 +88,10 @@
   content: "";
     background: #fff;
     position: absolute;
-    height: 9px;
-    width: 9px;
-    top: -5.5px;
-    right: 120px;
+    height: 0.5625em;
+    width: 0.5625em;
+    top: -0.34375em;
+    right: 7.5em;
     transform: rotate(45deg);
     border-top: 1px solid #e5e5e5;
     border-left: 1px solid #e5e5e5;
@@ -101,9 +103,9 @@
   background: 0 0;
   color: #f14635;
   border: 1px solid #f14635;
-  min-width: 100px;
-  height: 29px;
-  padding: 0px 21px;
+  min-width: 6.25em;
+  height: 1.8125em;
+  padding: 0 1.3125em;
   margin: 0 1px ;
 }
 .confirm__button:hover{
@@ -116,9 +118,12 @@
   }
   .link{
     display: flex;
-    margin-top: 13px;
+    margin-top: 0.8125em;
   }
   .city__link{
-    margin-left: 13px;
+    margin-left: 0.8125em;
+  }
+  .confirm__city{
+    position: static;
   }
 }

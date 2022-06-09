@@ -3,17 +3,22 @@ import cn from 'classnames';
 import Modal from '../../ModalBlock/Modal';
 import style from './searchBar.module.css';
 
-function searchBar({ cities }) {
+function searchBar({ cities, confirm, change }) {
   const [visiblePopup, setVisiblePopup] = useState(false);
   const [nameCity, setNameCity] = useState(null);
-  const [confirm, setConfirm] = useState(false);
+
+  useEffect(() => {
+    const city = localStorage.getItem('city');
+    setNameCity(city);
+  })
   const [isActive, setIsActive] = useState({
     cities,
     activeObject: null
   });
   const toggleVisiblePopup = () => {
     setVisiblePopup(true);
-    change()
+    change();
+
   };
   const toggleVisiblePopupClose = () => {
     setVisiblePopup(false);
@@ -21,14 +26,10 @@ function searchBar({ cities }) {
   const changeCityName = (nameCity) => {
     setNameCity(nameCity);
     setVisiblePopup(false);
+    localStorage.setItem('city', nameCity);
   }
 
-  const change = () => {
-    setConfirm(false)
-  }
-  useEffect(() => {
-    setConfirm(false)
-  }, [])
+
 
 
 

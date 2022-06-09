@@ -1,15 +1,20 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 import App from 'next/app'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps, product, cities }) {
+  const [confirm, setConfirm] = useState(false);
+  const change = () => {
+    setConfirm(false)
+  }
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap");
+    setConfirm(true)
   }, []);
   return (
     <>
-      <Layout product={product} cities={cities}>
+      <Layout product={product} cities={cities} change={change} confirm={confirm}  >
         <Component {...pageProps} product={product} />
       </Layout>
     </>

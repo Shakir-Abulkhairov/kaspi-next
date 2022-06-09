@@ -1,6 +1,6 @@
 .wrapper{
   border-top: 1px solid #e5e5e5;
-  padding: 30px 0 20px 0;
+  padding: 1.875em 0 1.25em 0;
 }
 .nav{
   border-bottom: 1px solid #e5e5e5;
@@ -23,8 +23,8 @@
   border-left: 1px solid #e5e5e5;
   flex: none;
   text-align: center;
-  height: 63px;
-  padding: 20px 0;
+  height: 3.9375em;
+  padding: 1.25em 0;
   position: relative;
   display: table-cell;
   
@@ -42,10 +42,10 @@
 }
 .nav__text {
   display: inline-block;
-  padding: 0 10px;
+  padding: 0 0.625em;
   vertical-align: middle;
   margin-top: -3px;
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 1.2;
 }
 /* .sticky__box{
@@ -66,14 +66,16 @@
     align-items: center;
     overflow-x: auto;
   }
-    .wrapper {
-      position: sticky;
-      top: 44px;
-      z-index: 2;
-      border-top: none;
-    }
-        .nav__item{
-          height: 31px;
-          padding: 0;
-        }
+
+  .wrapper {
+    position: sticky;
+    top: 2.75em;
+    z-index: 2;
+    border-top: none;
+  }
+
+  .nav__item {
+    height: 1.9375em;
+    padding: 0;
+  }
 }

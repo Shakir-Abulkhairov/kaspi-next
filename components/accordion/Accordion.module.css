@@ -1,0 +1,7 @@
+.accordion__block{
+  position: relative;
+}
+.accordion__icon{
+  position: absolute;
+  right: 15px;
+}

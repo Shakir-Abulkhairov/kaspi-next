@@ -7,7 +7,7 @@ function Products({ products }) {
         <>
             <div className={style.card}  >
                 <div className={style.imgBlock} >
-                    <img className={cn("card-img-top", style.img)} src='	https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h75/hd6/27943518502942/dks.png' alt="Card image cap" />
+                    <img className={cn("card-img-top", style.img)} src={products.image} alt="Card image cap" />
                 </div>
                 <div className={style.card__body}>
                     <div className="card-title">{products.title}</div>

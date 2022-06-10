@@ -1,21 +1,28 @@
 import Link from 'next/link';
 import style from './Electronics.module.css';
-import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react';
+import CategoryList from '../../components/CategoryList/CategoryList';
 function ItemDetails({ category }) {
-
+  const [categoryList, setCategoryList] = useState(false);
+  const categotyVisible = () => {
+    setCategoryList(!categoryList)
+  }
   return (
     <>
       <div className={style.wrapper}>
         <div className='container'>
-          <div className={style.content}>
-            <div className={style.left}>
-              Все категории(200)
-            </div>
-            <div className={style.right}>
-              {
-                category.map((category) => {
-                  return (
-                    <div key={category.id}>
+          {
+            category.map((category) => {
+              return (
+                <div className={style.content} key={category.id}>
+                  <div className={style.left}>
+                    <div>
+                      <Link href='/product'><a className='link__blue'>Все категории</a></Link><span className='sub__count'>({category.count})</span>
+                    </div>
+                    <CategoryList categoryArr={category} />
+                  </div>
+                  <div className={style.right}>
+                    <div >
                       <h2 className={style.category_header}>{category.name}</h2>
                       <div >
                         {
@@ -43,11 +50,11 @@ function ItemDetails({ category }) {
                         }
                       </div>
                     </div>
-                  )
-                })
-              }
-            </div>
-          </div>
+                  </div>
+                </div>
+              )
+            })
+          }
         </div>
       </div>
     </>

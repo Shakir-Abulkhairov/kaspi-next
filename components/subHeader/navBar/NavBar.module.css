@@ -1,6 +1,6 @@
 .wrapper{
   border-top: 1px solid #e5e5e5;
-  padding: 1.875em 0 1.25em 0;
+  background-color: #fff;
 }
 .nav{
   border-bottom: 1px solid #e5e5e5;
@@ -27,10 +27,10 @@
   padding: 1.25em 0;
   position: relative;
   display: table-cell;
-  
+  color: #0089d0;
 }
-.nav__item:first-child{
-  border-left:none;
+.nav__item:last-child{
+  border-right: 1px solid #e5e5e5;
 }
 .nav__link {
   font-weight: 500;
@@ -68,6 +68,7 @@
   }
 
   .wrapper {
+    padding-top: 30px;
     position: sticky;
     top: 2.75em;
     z-index: 2;

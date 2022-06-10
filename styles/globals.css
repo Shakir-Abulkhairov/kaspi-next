@@ -6,7 +6,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   box-sizing: border-box;
   outline: 0;
-  background-color: #f3f3f3;
+  background-color: #fbfbfb;
   
 }
 
@@ -38,7 +38,17 @@ a {
 .active {
   color: #ffd300;
 }
-
+.sub__count {
+  color: #999;
+  font-weight: normal;
+}
+.link__blue {
+  color: #0089d0;
+  font-weight: 500;
+}
+.link__blue:hover{
+  color: #000;
+}
 @media (max-width: 768px) {
   .title{
       font-size:2.3125em;

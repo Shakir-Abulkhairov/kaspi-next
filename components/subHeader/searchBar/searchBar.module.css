@@ -1,6 +1,6 @@
 .wrapper {
-  padding: 8.4375em 0 1.4375em 0;
-
+  padding: 5.4375em 0 0.4375em 0;
+  background-color: white;
 }
 
 /* .form {
@@ -113,7 +113,12 @@
   color: #fff;
 }
 @media (max-width: 768px) {
+  .wrapper{
+    padding: 0;
+    padding-top: 5.4375em ;
+  }
   .search_bar_wrapper{
+    display: flex;
     flex-direction: column;
   }
   .link{

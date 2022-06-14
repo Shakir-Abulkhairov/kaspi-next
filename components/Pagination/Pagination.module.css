@@ -1,0 +1,23 @@
+.pagination{
+  margin-top: 13px;
+  display: flex;
+  justify-content: center;
+}
+.pagination li{
+  list-style-type: none;
+}
+.page__item {
+  display: block;
+  float: left;
+  padding: 7px 21px;
+  cursor: pointer;
+  color: #0089d0;
+  border: 1px solid transparent;
+  border-left-color: #dcdcdc;
+}
+.page__item:hover,.active{
+  background: #e6e6e6;
+  border-radius: 2px;
+  border-color: #dcdcdc !important;
+  color: #000;
+}

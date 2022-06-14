@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "name": "Телефоны,гаджеты",
+    "img": "https://kaspi.kz/img/iphone-2x.png"
+  },
+  {
+    "id": "2",
+    "name": "Компьютеры",
+    "img": "https://kaspi.kz/img/apple-2x.png"
+  },
+  {
+    "id": "3",
+    "name": "Обувь",
+    "img": "https://kaspi.kz/img/shoes-2x.png"
+  },
+  {
+    "id": "4",
+    "name": "Одежда",
+    "img": "https://kaspi.kz/img/clothes-2x.png"
+  },
+  {
+    "id": "5",
+    "name": "Украшения,аксессуары",
+    "img": "https://kaspi.kz/img/decorations-2x.png"
+  },
+  {
+    "id": "6",
+    "name": "Спорт,туризм",
+    "img": "https://kaspi.kz/img/sport-2x.png"
+  },
+  {
+    "id": "7",
+    "name": "Красота,здоровье",
+    "img": "https://kaspi.kz/img/beauty-2x.png"
+  },
+  {
+    "id": "8",
+    "name": "Товары для животных",
+    "img": "https://kaspi.kz/img/pets-2x.png"
+  },
+  {
+    "id": "9",
+    "name": "Подарки,товары для праздников",
+    "img": "https://kaspi.kz/img/gifts-2x.png"
+  },
+  {
+    "id": "10",
+    "name": "Тв,Аудио,Видео",
+    "img": "https://kaspi.kz/img/media-2x.png"
+  },
+  {
+    "id": "11",
+    "name": "Автотовары",
+    "img": "https://kaspi.kz/img/Auto.png"
+  },
+  {
+    "id": "12",
+    "name": "Мебель",
+    "img": "https://kaspi.kz/img/Furniture.png"
+  },
+  {
+    "id": "13",
+    "name": "Супермаркеты",
+    "img": "https://kaspi.kz/img/Supermarket.png"
+  },
+  {
+    "id": "14",
+    "name": "Строительство,ремонт",
+    "img": "https://kaspi.kz/img/Construction.png"
+  },
+  {
+    "id": "15",
+    "name": "Аптеки",
+    "img": "https://kaspi.kz/img/Pharmacy.png"
+  },
+  {
+    "id": "16",
+    "name": "Досуг,книги",
+    "img": "https://kaspi.kz/img/Books.png"
+  },
+  {
+    "id": "17",
+    "name": "Канцелярские товары",
+    "img": "https://kaspi.kz/img/Stationery.png"
+  },
+  {
+    "id": "18",
+    "name": "Товары для дома и дачи",
+    "img": "https://kaspi.kz/img/House.png"
+  },
+  {
+    "id": "19",
+    "name": "Детские товары",
+    "img": "https://kaspi.kz/img/Kiddos.png"
+  },
+  {
+    "id": "20",
+    "name": "Бытовая техника",
+    "img": "https://kaspi.kz/img/Appliances.png"
+  }
+]

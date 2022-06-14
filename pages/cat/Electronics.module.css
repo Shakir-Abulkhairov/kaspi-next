@@ -4,44 +4,14 @@
 .content{
   display: flex;
 }
-.category_header{
-  margin-bottom: 1.5em;
+.products__block {
+  display: flex;
 }
 
-.sub_name{
-  font-size: 1.125em;
-  font-weight: bold;
-  /* margin: 0 12px; */
-  padding-bottom: 0.875em;
-}
-.subcat_ul{
+.block__inner {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  border-left: 1px solid #e5e5e5;
-  padding-left: 0.625em;
-}
-.products__block{
-  display: flex;
-}
-.block__inner{
-  display: flex;
-  justify-content:center;
-  align-items:center; 
-  flex-wrap: wrap;
-}
-.subcat_li{
-  color: #0089d0;
-  list-style: none;
-  padding: 0 0.4375em 0.75em 0;
-}
-.subcat_li:hover{
-  text-decoration: underline;
-  cursor: pointer;
-}
-.left{
-  width: 29%;
-}
-.right{
-  width: 71%;
+  max-width: 75%;
 }

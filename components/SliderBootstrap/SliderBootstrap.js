@@ -1,78 +1,80 @@
+import { useState } from 'react';
+import Link from 'next/link';
 import style from './slider-bootstrap/SliderBootstrap.module.css';
 function SliderBootstrap({ product }) {
+  console.log(product)
+  const [nextHotsMoving, setNextHotMoving] = useState(0);
 
-  const switchImg = (img) => {
-    switch (img) {
-      case 'jewelery':
-        return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIYjei7OgEsoA96v1JGpE-UXoxa0pB47XwMw&usqp=CAU';
-      case 'electronics':
-        return 'https://kaspi.kz/img/iphone-2x.png';
-      case "men's clothing":
-        return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSspVZCAgEjsYrMtOQ0gWOuvOZFgpPZ4ylDIA&usqp=CAU';
-      case "women's clothing":
-        return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRR4_ZhztP0SvApVMUU7_o8X44w0Zb041YNA&usqp=CAU';
-
-      default:
-        break;
-    }
+  function nextHotHandler() {
+    setNextHotMoving((prev) => prev - 1200);
+    if (nextHotsMoving <= -1200) setNextHotMoving(0); //custom: should be changed
   }
+  function prevHotHandler() {
+    setNextHotMoving((prev) => prev + 1200);
+    if (nextHotsMoving <= 0) setNextHotMoving(-1200); //custom: should be changed
+  }
+
   return (
-    <>
-      <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
-        <div className="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-        <div className="carousel-inner">
-          {/* {
-            product.map((item, i) => {
-              console.log(item)
+    <div className={style.slider_main_cont}>
+      {/* BUTTON PREV */}
+      <button className={style.btn_prev_hot} onClick={prevHotHandler}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="leftBtn"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      {/* // */}
+
+      {/* SLIDER */}
+      <div className={style.cont_images_sell_slider}>
+        <div
+          className={style.hot_object}
+          style={{ marginLeft: `${nextHotsMoving}px` }}
+        >
+          {/* add IMAGES next!!! */}
+          <div className={style.hot_images_row}>
+            {product.map((item) => {
               return (
-                <div
-                  className={i === 0 ? "carousel-item active" : ''}
-                  key={i}>
-                  <div className={cn(style.wrapper, "carousel-caption d-none d-md-block")}>
-                  <a href="#" className={style.item}>
-                    <span className={style.title}>{item}</span>
-                    <span className={style.img}>
-                      <img src={switchImg(product)} classname="d-block w-100" />
+                <Link href='/product'>
+                  <a className={style.slider__item}>
+                    <span className={style.item__name}>{item.name}</span>
+                    <span className={style.item__img}>
+                      <img src={item.img} />
                     </span>
                   </a>
-
-                  </div>
-                </div>
-              )
-            })
-          }
- */}
-          <div className="carousel-item active">
-            <img src="https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h7a/h0e/48375283089438/back-magic-support-bm07-103093603-1.jpg" className="d-block w-100" alt="..." />
+                </Link>
+              );
+            })}
           </div>
-          <div className="carousel-item">
-            <img src="https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h7a/h0e/48375283089438/back-magic-support-bm07-103093603-1.jpg" className="d-block w-100" alt="..." />
-          </div>
-          <div className="carousel-item ">
-            <img src="https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h7a/h0e/48375283089438/back-magic-support-bm07-103093603-1.jpg" className="d-block w-100" alt="..." />
-          </div>
-          <div className="carousel-item ">
-            <img src="https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h7a/h0e/48375283089438/back-magic-support-bm07-103093603-1.jpg" className="d-block w-100" alt="..." />
-          </div>
-
-
+          {/* Images ends */}
         </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
       </div>
-    </>
-  )
+      {/* BUTTON NEXT */}
+      <button onClick={nextHotHandler} className={style.btn_next_hot}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="rightBtn"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+      {/* // */}
+    </div>
+  );
 }
 
 export default SliderBootstrap

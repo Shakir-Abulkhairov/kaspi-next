@@ -1,0 +1,35 @@
+.category_header {
+  margin-bottom: 1.5em;
+}
+
+.sub_name {
+  font-size: 1.125em;
+  font-weight: bold;
+  /* margin: 0 12px; */
+  padding-bottom: 0.875em;
+}
+
+.subcat_ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-left: 1px solid #e5e5e5;
+  padding-left: 0.625em;
+}
+
+
+
+.subcat_li {
+  color: #0089d0;
+  list-style: none;
+  padding: 0 0.4375em 0.75em 0;
+}
+
+.subcat_li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.right {
+  width: 71%;
+}

@@ -3,7 +3,7 @@ import cn from 'classnames';
 import Modal from '../../ModalBlock/Modal';
 import style from './searchBar.module.css';
 
-function searchBar({ cities, confirm, change }) {
+function searchBar({ cities, confirm, change, setSearchTerm, searchTerm }) {
   const [visiblePopup, setVisiblePopup] = useState(false);
   const [nameCity, setNameCity] = useState(null);
 
@@ -41,8 +41,9 @@ function searchBar({ cities, confirm, change }) {
           <div className={style.search_bar_wrapper}>
             <div className={style.search_bar_block}>
               <input className={style.search_bar_input}
-                type='seacrch'
+                type='search'
                 placeholder='Поиск товара'
+                onChange={(e) => { setSearchTerm(e.target.value) }}
                 maxLength='256' />
               <button className={style.search_bar_button}>
                 <span className={style.search_bar_icon}>

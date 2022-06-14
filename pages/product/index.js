@@ -20,7 +20,7 @@ function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
       <div className="container">
         <div className={style.products__block}>
           {
-            category.map((category) => <LeftCatList category={category} />)
+            category.map((category) => <LeftCatList key={category.id} category={category} />)
           }
           <div className={style.block__inner}>
             {
@@ -33,7 +33,7 @@ function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
 
               }).map((product) => {
                 return (
-                  <div className={cn(style.block__item)}>
+                  <div className={cn(style.block__item)} key={product.id}>
                     <Link href={`/product/itemDetails`}>
                       <a>
                         <Products key={product.id} products={product} />

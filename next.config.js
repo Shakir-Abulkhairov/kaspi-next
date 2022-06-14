@@ -8,7 +8,7 @@ const nextConfig = {
   trailingSlash: false,
   images: {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    domains: ['kaspi.kz', 'fakestoreapi.com'],
+    domains: ['kaspi.kz', 'fakestoreapi.com', 'www.svgrepo.com'],
   },
   // env: {
   //   CATEGORY_URL: 'http://localhost:3000/api/producrApi/get-top-cat-list',

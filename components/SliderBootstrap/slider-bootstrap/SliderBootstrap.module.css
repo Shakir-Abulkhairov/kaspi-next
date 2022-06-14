@@ -1,6 +1,7 @@
 .slider_main_cont {
   position: relative;
   z-index: 1;
+
 }
 
 .cont_images_sell_slider {
@@ -50,13 +51,11 @@
   position: absolute;
   right: 0;
   top: 85px;
-
   height: 18px;
   padding: 0 6px;
   line-height: 18px;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
-  padding: 0 6px;
 }
 
 /* Original IMG */
@@ -74,27 +73,10 @@
 
 /* BUTTON */
 .slider_main_cont button:hover {
-  width: 30px;
-  height: 30px;
-  border: solid 1px #e1e1e1;
-  border-radius: 3px;
-  background: #ffd47e;
-  outline: 0;
-  transition: all 0.3s;
-
-  position: absolute;
+  background-color: #fff;
 }
 
-.slider_main_cont button {
-  width: 30px;
-  height: 30px;
-  border: solid 1px #e1e1e1;
-  border-radius: 3px;
-  background: #fff;
-  outline: 0;
 
-  position: absolute;
-}
 
 .btn_prev_hot {
   left: -20px;
@@ -105,7 +87,24 @@
   right: -20px;
   top: 150px;
 }
-
+.btn {
+  position: absolute;
+  cursor: pointer;
+  transition: fill .3s ease;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border:none;
+  top: 50%;
+  background-color: rgba(0, 0, 0, .04);
+    transition: all 0.5s ease;
+}
+.btn:first-child{
+    left: -53px;
+}
+.btn:last-child {
+  right: -53px;
+}
 .btn_next_hot svg {
   width: 16px;
   height: 16px;

@@ -1,18 +1,31 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Products from '../../components/Products/Products';
 import Link from "next/link";
 import cn from 'classnames';
 import style from '../cat/Electronics.module.css';
 import LeftCatList from '../../components/CatListSides/LeftCatList/LeftCatList';
 import Pagination from '../../components/Pagination/Pagination';
+import { useDispatch, useSelector } from 'react-redux';
+import { addProdAc } from '../../redux/slices/product';
 
 function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(addProdAc(catProd));
+  }, []);
+  const prod = useSelector((state) => state.addProd.test);
+
+  console.log(prod);
+
   const [currentPage, setCurrentPage] = useState(1);
   const [productPerPage] = useState(10);
 
   const lastProductIndex = productPerPage * currentPage;
   const firstProductIndex = lastProductIndex - productPerPage;
+
   const currentProduct = catProd.slice(firstProductIndex, lastProductIndex);
+
+
 
   const paginate = pageNumber => setCurrentPage(pageNumber)
   return (

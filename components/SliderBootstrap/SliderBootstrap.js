@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import cn from 'classnames';
 import style from './slider-bootstrap/SliderBootstrap.module.css';
 function SliderBootstrap({ product }) {
-  console.log(product)
   const [nextHotsMoving, setNextHotMoving] = useState(0);
 
   function nextHotHandler() {
@@ -17,7 +17,7 @@ function SliderBootstrap({ product }) {
   return (
     <div className={style.slider_main_cont}>
       {/* BUTTON PREV */}
-      <button className={style.btn_prev_hot} onClick={prevHotHandler}>
+      <button className={cn(style.btn_prev_hot, style.btn)} onClick={prevHotHandler}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="leftBtn"
@@ -60,7 +60,7 @@ function SliderBootstrap({ product }) {
         </div>
       </div>
       {/* BUTTON NEXT */}
-      <button onClick={nextHotHandler} className={style.btn_next_hot}>
+      <button onClick={nextHotHandler} className={cn(style.btn_next_hot, style.btn)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="rightBtn"

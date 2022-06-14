@@ -55,7 +55,7 @@ function Header() {
             <div className={style.header__inner_block}>
               <nav className={cn(style.nav, active ? style.nav__active : '')}>
                 <span className={cn(style.dropdown_content, style.header__item)}>
-                  <a onMouseMove={handleHover} onMouseLeave={handleLeave}>Клиентам{dropDown}</a>
+                  <span onMouseMove={handleHover} onMouseLeave={handleLeave}>Клиентам{dropDown}</span>
                   <div className={style.dropDown__link}>
                     <div>
                       <Link href='/'>

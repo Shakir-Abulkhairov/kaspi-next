@@ -28,7 +28,7 @@ function CategoryList({ categoryArr }) {
           <span className='sub__count'>({categoryArr.count})</span>
           <div>
             {categoryList &&
-              categoryArr.subcat_arr.map((subcat) => <SubCategoryList subcat={subcat} saveOpen={saveOpen} saveChange={saveChange} />)
+              categoryArr.subcat_arr.map((subcat) => <SubCategoryList key={subcat.id} subcat={subcat} saveOpen={saveOpen} saveChange={saveChange} />)
             }
           </div>
         </ul>

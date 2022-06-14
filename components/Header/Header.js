@@ -45,7 +45,7 @@ function Header() {
         <div className={style.container}>
           <div className={style.header__inner}>
             <div className={style.logo}>
-              <Link href="/" ><a ><img src='https://kaspi.kz/img/Logo.svg' /></a></Link>
+              <Link href="/" ><a ><Image src='https://kaspi.kz/img/Logo.svg' width={141} height={33} /></a></Link>
             </div>
             <div className={style.header__burger} onClick={changeActive}>
               <span className={style.burger__item}></span>

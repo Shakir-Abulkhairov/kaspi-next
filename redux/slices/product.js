@@ -5,11 +5,11 @@ import { createSlice } from '@reduxjs/toolkit';
 const addProd = createSlice({
   name: "product",
   initialState: {
-    test: null
+    items: []
   },
   reducers: {
     addProdAc(state, action) {
-      state.test = action.payload
+      state.items.push(action.payload);
     }
   }
 })

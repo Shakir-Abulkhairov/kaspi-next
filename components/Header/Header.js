@@ -75,7 +75,7 @@ function Header() {
                 </span>
                 <Link href="/bizkredit" ><a className={style.header__item}>Бизнес</a></Link>
                 <Link href="/kaspiGuide" ><a className={style.header__item}>Kaspi Гид</a></Link>
-                <Link href="/kaspiGuide" ><a className={style.header__item}> <Image src='/image/bag.svg' width={25} height={25} /></a></Link>
+                <Link href="/cart" ><a className={style.header__item}> <Image src='/image/bag.svg' width={25} height={25} /></a></Link>
               </nav>
             </div>
           </div>

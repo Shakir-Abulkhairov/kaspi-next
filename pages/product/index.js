@@ -1,21 +1,29 @@
 import { useState, useEffect } from 'react';
 import Products from '../../components/Products/Products';
-import Link from "next/link";
 import cn from 'classnames';
 import style from '../cat/Electronics.module.css';
 import LeftCatList from '../../components/CatListSides/LeftCatList/LeftCatList';
 import Pagination from '../../components/Pagination/Pagination';
 import { useDispatch, useSelector } from 'react-redux';
 import { addProdAc } from '../../redux/slices/product';
+import { addCard, addTotalCount } from '../../redux/slices/cart';
 
 function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(addProdAc(catProd));
   }, []);
-  const prod = useSelector((state) => state.addProd.test);
+  const items = useSelector((state) => state.addProd.items);
 
-  console.log(prod);
+  const handleAddCard = (card) => {
+    dispatch(addCard(card));
+  }
+  const handleChangeTotalPrice = (totalPrice) => {
+    dispatch(addTotalCount(totalPrice))
+  }
+
+
 
   const [currentPage, setCurrentPage] = useState(1);
   const [productPerPage] = useState(10);
@@ -23,7 +31,7 @@ function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
   const lastProductIndex = productPerPage * currentPage;
   const firstProductIndex = lastProductIndex - productPerPage;
 
-  const currentProduct = catProd.slice(firstProductIndex, lastProductIndex);
+  const currentProduct = items[0] && items[0].slice(firstProductIndex, lastProductIndex);
 
 
 
@@ -47,11 +55,8 @@ function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
               }).map((product) => {
                 return (
                   <div className={cn(style.block__item)} key={product.id}>
-                    <Link href={`/product/itemDetails`}>
-                      <a>
-                        <Products key={product.id} products={product} />
-                      </a>
-                    </Link>
+                    <Products key={product.id} products={product}
+                      handleChangeTotalPrice={handleChangeTotalPrice} handleAddCard={handleAddCard} />
                   </div>
                 )
               })

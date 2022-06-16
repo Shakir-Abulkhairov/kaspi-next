@@ -3,6 +3,7 @@ import Link from 'next/link';
 import cn from 'classnames';
 import style from './slider-bootstrap/SliderBootstrap.module.css';
 function SliderBootstrap({ product }) {
+
   const [nextHotsMoving, setNextHotMoving] = useState(0);
 
   function nextHotHandler() {

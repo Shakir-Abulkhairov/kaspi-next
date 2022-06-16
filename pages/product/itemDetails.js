@@ -30,7 +30,7 @@ const ItemDetails = ({ electronics }) => {
             <div className={style.category}>
               <RaitingStar data={electronics} /> <span className={style.description_span}>({electronics.rating.count}) отзыв</span>
             </div>
-
+            <button>добавить</button>
             <Link href="/">
               <a className={style.link}>
                 ← Назад

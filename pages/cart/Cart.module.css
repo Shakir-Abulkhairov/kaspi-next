@@ -32,6 +32,7 @@
 /* cards */
 .card__item{
   display: flex;
+  align-items: center;
   width: 100%;
   border-top: 1px solid #f6f6f6;
   padding-top: 30px;
@@ -55,7 +56,7 @@
 }
 .card__item_info h3{
   font-weight: 700;
-  font-size: 22px;
+  font-size: 16px;
   line-height: 27px;
   letter-spacing: .01em;
 }
@@ -74,6 +75,7 @@
   align-items: center;
   justify-content: center;
   width: 33%;
+  margin-left: 16px;
 }
 .card__item_remove{
   display: flex;
@@ -89,7 +91,7 @@
   height: 32px;
   min-width: 32px;
   padding: 0;
-  border-radius: 100%;
+  border-radius: 23%;
   cursor: pointer;
   border: 2px solid rgba(0, 0, 0, .4);
   transition:all 0.5s;
@@ -106,4 +108,22 @@
 }
 .cart__bottom_details span{
   font-size: 22px;
+}
+.empty{
+  margin: 0 auto;
+  max-width: 292px;
+}
+.empty img{
+  max-width:100%;
+}
+.empty__text{
+  font-size: 37px;
+  color: rgba(0, 0, 0, .4);
+  font-weight: 700;
+  text-align: center;
+}
+
+.back:hover{
+  transition: all .3s;
+  color: #f14635;
 }

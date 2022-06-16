@@ -4,7 +4,7 @@ import RaitingStar from '../Rating-Star/RatingStar';
 import style from './Products.module.css';
 function Products({ products, handleAddCard, handleChangeTotalPrice }) {
 
-    const test = (product) => {
+    const handlerAddToCart = (product) => {
         handleAddCard(product);
         handleChangeTotalPrice(product.price)
     }
@@ -29,7 +29,7 @@ function Products({ products, handleAddCard, handleChangeTotalPrice }) {
                     </div>
                     <li className={style.card__item}>Число оценивших: {products.rating.count}</li>
                     <li className={style.card__item}>Категория: {products.category}</li>
-                    <button onClick={() => test(products)}>добавить</button>
+                    <button onClick={() => handlerAddToCart(products)} className={style.button__add}>Добавить</button>
                 </ul>
 
             </div>

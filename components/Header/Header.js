@@ -1,14 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import cn from 'classnames'
 import style from './Header.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 function Header() {
+  const products = useSelector((state) => state.cart.items.length);
+
   const [dropDown, setDropDown] = useState('');
   const [active, setActive] = useState(false);
   const changeActive = () => {
     setActive(!active)
   }
+
   const renderDropDown = () => {
     return (
       <div className={style.block}>
@@ -75,7 +79,7 @@ function Header() {
                 </span>
                 <Link href="/bizkredit" ><a className={style.header__item}>Бизнес</a></Link>
                 <Link href="/kaspiGuide" ><a className={style.header__item}>Kaspi Гид</a></Link>
-                <Link href="/cart" ><a className={style.header__item}> <Image src='/image/bag.svg' width={25} height={25} /></a></Link>
+                <Link href="/cart" ><a className={cn(style.header__item, style.last__item)}> <Image src='/image/bag.svg' width={25} height={25} />{products ? <span className={style.round}>{products}</span> : ''}</a></Link>
               </nav>
             </div>
           </div>

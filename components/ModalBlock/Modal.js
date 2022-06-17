@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import cn from 'classnames';
 import Link from 'next/link';
 import style from './Modal.module.css';
@@ -7,6 +8,9 @@ function Modal({ toggleVisiblePopupClose, changeCityName, isActive, setIsActive 
   const handleClick = (id) => {
     setIsActive({ ...isActive, activeObject: isActive.cities[id] });
   };
+
+
+
   const toggleActiveStyle = (id) => {
     if (isActive.cities[id] === isActive.activeObject) {
       return style.active;

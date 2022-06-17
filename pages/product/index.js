@@ -5,7 +5,7 @@ import style from '../cat/Electronics.module.css';
 import LeftCatList from '../../components/CatListSides/LeftCatList/LeftCatList';
 import Pagination from '../../components/Pagination/Pagination';
 import { useDispatch, useSelector } from 'react-redux';
-import { addProdAc } from '../../redux/slices/product';
+import { addProdAc, fetchItems } from '../../redux/slices/product';
 import { addCard, addTotalCount } from '../../redux/slices/cart';
 
 function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
@@ -64,13 +64,15 @@ function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
           </div>
 
         </div>
-        <Pagination currentPage={currentPage} productPerPage={productPerPage} totalCount={catProd.length} paginate={paginate} />
+        <Pagination currentPage={currentPage} productPerPage={productPerPage} totalCount={items.length} paginate={paginate} />
       </div>
 
     </div>
   )
 }
-
+// wrapper.getStaticProps((store) => () => {
+//   store.dispatch(incrementCounter())
+// })
 
 export async function getServerSideProps() {
   try {

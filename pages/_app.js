@@ -20,15 +20,15 @@ function MyApp({ Component, pageProps, product, cities, category }) {
   }, []);
   return (
     <>
-      <Provider store={store}>
-        <Layout product={product} cities={cities} change={change}
-          confirm={confirm} searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm}>
+      {/* <Provider store={store}> */}
+      <Layout product={product} cities={cities} change={change}
+        confirm={confirm} searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}>
 
-          <Component {...pageProps} searchTerm={searchTerm}
-            setSearchTerm={setSearchTerm} category={category} />
-        </Layout>
-      </Provider>
+        <Component {...pageProps} searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm} category={category} />
+      </Layout>
+      {/* </Provider> */}
     </>
   )
 }
@@ -57,4 +57,4 @@ MyApp.getInitialProps = async (appContext) => {
   }
 }
 
-export default MyApp
+export default store.withRedux(MyApp);

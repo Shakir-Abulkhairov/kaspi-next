@@ -1,14 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-
+import { createWrapper } from "next-redux-wrapper";
 import addProd from "./slices/product";
-import cart, { getTotalPrice } from './slices/cart';
+import cart from './slices/cart';
 
-export const store = configureStore({
+const initStore = () => configureStore({
   reducer: {
     addProd,
     cart
   },
-
-
-})
-store.dispatch(getTotalPrice())
+});
+export const store = createWrapper(initStore)

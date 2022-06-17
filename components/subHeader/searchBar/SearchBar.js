@@ -6,15 +6,15 @@ import style from './searchBar.module.css';
 function searchBar({ cities, confirm, change, setSearchTerm, searchTerm }) {
   const [visiblePopup, setVisiblePopup] = useState(false);
   const [nameCity, setNameCity] = useState(null);
-
-  useEffect(() => {
-    const city = localStorage.getItem('city');
-    setNameCity(city);
-  })
   const [isActive, setIsActive] = useState({
     cities,
     activeObject: null
   });
+  useEffect(() => {
+    const city = localStorage.getItem('city');
+    setNameCity(city);
+  })
+
   const toggleVisiblePopup = () => {
     setVisiblePopup(true);
     change();

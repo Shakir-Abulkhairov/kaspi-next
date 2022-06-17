@@ -52,7 +52,7 @@
 
 }
 .active{
-  color: #ffd300;
+    color: #f14635;
 }
 @media (max-width: 768px) {
   .block__link {

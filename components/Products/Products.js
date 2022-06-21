@@ -12,26 +12,29 @@ function Products({ products, handleAddCard, handleChangeTotalPrice }) {
     return (
         <>
             <div className={style.card}  >
-                <Link href={`/product/itemDetails`}>
-                    <a>
-                        <div className={style.imgBlock} >
-                            <img className={cn("card-img-top", style.img)} src={products.image} alt="Card image cap" />
-                        </div>
-                    </a>
-                </Link>
-                <div className={style.card__body}>
-                    <div className="card-title">{products.title}</div>
+                <div className={style.imgBlock} >
+                    <img className={cn("card-img-top", style.img)} src={products.image} alt="Card image cap" />
                 </div>
-                <ul className={style.card__block}>
-                    <li className={style.card__item}>{products.price}₸</li>
-                    <div className="ratings">
-                        <RaitingStar data={products} />
+                <div className={style.card__info}>
+                    <div className={style.card__body}>
+                        <Link href={`/product/itemDetails`}>
+                            <a>
+                                <div className={style.card__title}>{products.title}</div>
+                            </a>
+                        </Link>
                     </div>
-                    <li className={style.card__item}>Число оценивших: {products.rating.count}</li>
-                    <li className={style.card__item}>Категория: {products.category}</li>
-                    <button onClick={() => handlerAddToCart(products)} className={style.button__add}>Добавить</button>
-                </ul>
+                    <ul className={style.card__block}>
+                        <div className={style.ratings}>
+                            <RaitingStar data={products} /> <span>({products.rating.count})</span>
+                        </div>
+                        <li className={style.card__item}>
+                            <div className={style.card__price_text}>Цена</div>
+                            <div className={style.card__price}>{products.price}₸</div>
+                        </li>
+                        <button onClick={() => handlerAddToCart(products)} className={style.button__add}>Добавить</button>
+                    </ul>
 
+                </div>
             </div>
         </>
     )

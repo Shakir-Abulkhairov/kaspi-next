@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { store } from './../redux/store';
+import { store } from '../redux/store';
 import Layout from '../components/Layout';
 import App from 'next/app'
 import '../styles/globals.css'
@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 
 
 function MyApp({ Component, pageProps, product, cities, category }) {
-  ;
+
   const [confirm, setConfirm] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -20,15 +20,15 @@ function MyApp({ Component, pageProps, product, cities, category }) {
   }, []);
   return (
     <>
-      {/* <Provider store={store}> */}
-      <Layout product={product} cities={cities} change={change}
-        confirm={confirm} searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}>
+      <Provider store={store}>
+        <Layout product={product} cities={cities} change={change}
+          confirm={confirm} searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}>
 
-        <Component {...pageProps} searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm} category={category} />
-      </Layout>
-      {/* </Provider> */}
+          <Component {...pageProps} searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm} category={category} />
+        </Layout>
+      </Provider>
     </>
   )
 }
@@ -57,4 +57,4 @@ MyApp.getInitialProps = async (appContext) => {
   }
 }
 
-export default store.withRedux(MyApp);
+export default MyApp;

@@ -1,12 +1,23 @@
 {
-  "id": 11,
-  "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
-  "price": 109,
-  "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
-  "category": "electronics",
-  "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+  "id": 9,
+  "title": "Беговая дорожка Xiaomi KingSmith Walking Pad R2 TRR2F",
+  "price": "245 000 ",
+  "description": [
+    "- тип: электрическая",
+    "- складная: да",
+    "- максимальный вес пользователя: 120 кг",
+    "- ширина бегового полотна: 42 см"
+  ],
+  "category": "электрическая",
+  "image": [
+    "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h2c/h3f/49846869032990/xiaomi-kingsmith-walking-pad-r2-101929146-1-Container.jpg",
+    "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hf9/h76/49846869426206/xiaomi-kingsmith-walking-pad-r2-101929146-3-Container.jpg",
+    "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h70/h71/49846869229598/xiaomi-kingsmith-walking-pad-r2-101929146-2-Container.jpg",
+    "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hed/h78/49846869622814/xiaomi-kingsmith-walking-pad-r2-101929146-4-Container.jpg",
+    "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/hff/h39/49846869819422/xiaomi-kingsmith-walking-pad-r2-101929146-5-Container.jpg"
+  ],
   "rating": {
-    "rate": 4.8,
-    "count": 319
+    "rate": 3.3,
+    "count": 203
   }
 }

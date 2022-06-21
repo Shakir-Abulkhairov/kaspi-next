@@ -4,6 +4,7 @@ import style from './Cart.module.css';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeFromCart, decreaseFromCart, addCard, removeCart, getTotalPrice } from './../../redux/slices/cart';
+
 function Cart() {
   const { cart, prod, price, count } = useSelector(({ cart }) => {
     return {

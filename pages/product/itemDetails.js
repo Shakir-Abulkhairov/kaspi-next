@@ -1,8 +1,14 @@
 import Image from 'next/image';
+import { useState } from 'react';
 import Link from 'next/link';
 import RaitingStar from '../../components/Rating-Star/RatingStar';
 import style from './ItemDetails.module.css';
 const ItemDetails = ({ electronics }) => {
+  const [slider, setSlider] = useState(0);
+  const handleClickSlider = (slideid) => {
+    setSlider(slideid)
+    console.log(electronics.image[slideid])
+  }
   return (
     <div className={style.wrapper}>
       <div className={style.itemDetails}>
@@ -10,16 +16,23 @@ const ItemDetails = ({ electronics }) => {
           <div className={style.itemDetails__inner__left}>
             <div className={style.itemDetails__inner__left__item}>
               <div className={style.imgBlock}>
-                <Image width="100%" height="100%" layout="responsive" objectFit="contain" className={style.img} src={electronics.image} alt="Card image cap" />
+                <div className={style.slider__block}>
+                  <div>
+                    <img src={electronics.image[slider]} className />
+                  </div>
+                  {/* <Image width="100%" height="100%" layout="responsive" objectFit="contain" className={style.img} src={electronics.image[slider]} alt="Card image cap" /> */}
+                  <div>
+                    {
+                      electronics.image.map((img, i) => <div className={style.slider} onClick={() => handleClickSlider(i)}> <img className={style.img} src={img} alt="Card image cap" /></div>)
+                    }
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div className={style.itemDetails__inner__right}>
             <div className={style.title}>
               {electronics.title}
-            </div>
-            <div className={style.description}>
-              <span className={style.description_span}>Описание:</span> {electronics.description}
             </div>
             <div className={style.category}>
               <span className={style.description_span}>Категория:</span> {electronics.category}
@@ -30,8 +43,10 @@ const ItemDetails = ({ electronics }) => {
             <div className={style.category}>
               <RaitingStar data={electronics} /> <span className={style.description_span}>({electronics.rating.count}) отзыв</span>
             </div>
-            <button>добавить</button>
-            <Link href="/">
+            <div className={style.description}>
+              {electronics.description}
+            </div>
+            <Link href="/product">
               <a className={style.link}>
                 ← Назад
               </a>

@@ -4,7 +4,7 @@ export default function Home({ product }) {
   return (
     <>
       <Promo />
-      <Services />
+      {/* <Services /> */}
       <KaspiShop product={product} />
     </>
   )

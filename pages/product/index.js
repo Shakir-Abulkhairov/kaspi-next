@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { wrapper } from '../../redux/store';
+
 import Products from '../../components/Products/Products';
 import cn from 'classnames';
 import style from '../cat/Electronics.module.css';
@@ -11,9 +13,10 @@ import { addCard, addTotalCount } from '../../redux/slices/cart';
 function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(addProdAc(catProd));
-  }, []);
+  // useEffect(() => {
+  //   dispatch(addProdAc(catProd));
+  // }, []);
+
   const items = useSelector((state) => state.addProd.items);
 
   const handleAddCard = (card) => {
@@ -22,7 +25,7 @@ function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
   const handleChangeTotalPrice = (totalPrice) => {
     dispatch(addTotalCount(totalPrice))
   }
-
+  console.log(items)
 
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -31,7 +34,7 @@ function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
   const lastProductIndex = productPerPage * currentPage;
   const firstProductIndex = lastProductIndex - productPerPage;
 
-  const currentProduct = items[0] && items[0].slice(firstProductIndex, lastProductIndex);
+  const currentProduct = catProd && catProd.slice(firstProductIndex, lastProductIndex);
 
 
 
@@ -59,6 +62,7 @@ function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
                       handleChangeTotalPrice={handleChangeTotalPrice} handleAddCard={handleAddCard} />
                   </div>
                 )
+
               })
             }
           </div>
@@ -70,31 +74,17 @@ function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
     </div>
   )
 }
-// wrapper.getStaticProps((store) => () => {
-//   store.dispatch(incrementCounter())
-// })
+
+
 
 export async function getServerSideProps() {
-  try {
-    const response = await fetch('http://localhost:3000/api/producrApi/get-product');
-    const body = await response.json();
+  const response = await fetch('http://localhost:3000/api/producrApi/get-product');
+  const data = await response.json();
+  return {
+    props: {
+      catProd: data
+    }
+  };
+};
 
-    if (!body) {
-      return {
-        notFound: true,
-      }
-    }
-    return {
-      props: {
-        catProd: body
-      }
-    }
-  } catch (e) {
-    return {
-      props: {
-        catProd: null
-      }
-    }
-  }
-}
 export default Electronics

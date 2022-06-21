@@ -3,36 +3,62 @@
 .card {
     margin-top: 0.8125em;
     float: left;
-    width: 17em;
+    width: 240px;
     border: 1px solid #e5e5e5;
     background: #fff;
     padding: 1.3125em 0.875em 0;
     margin-bottom: -1px;
     box-sizing: border-box;
     font-size: 0.8125em;
-    height: 26.375em;
+    height: 381px;
 }
-
+.card__info{
+    margin-top: 17px;
+    height: 4.375em;
+}
+.card__info::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 0 0 21px;
+    background: #e5e5e5;
+}
 .imgBlock {
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 13.1875em;
-    height: 9.375em;
+    width: 169px;
+    height: 150px;
 }
 
 .img {
-    width: 6.25em;
+    width: 100%;
 }
 
 .card__body {
     margin:0.625em 0 ;
-    height: 4.375em;
+}
+.card__title{
+  font-size: 14px;
+  height: 37px;
+  color: #0089d0;
 }
 
 .card__item {
     list-style-type: none;
     border-bottom: 1px solid #e5e5e5;
+}
+.card__price_text{
+    display: block;
+    color: #999;
+    margin-bottom: 4px;
+    min-height: 21px;
+}
+.card__price{
+    font-size: 17px;  
+    font-weight: 500;
 }
 
 .card__block {
@@ -45,4 +71,7 @@
     color: #fff;
     border: 1px solid #f14635;
     margin-top: 13px;
+}
+.ratings {
+    margin: 2px 0 4px 0;
 }

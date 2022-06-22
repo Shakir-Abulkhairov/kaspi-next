@@ -1,0 +1,25 @@
+.modal__cities {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.block__link {
+  display: flex;
+  text-align: left;
+  flex-wrap: wrap;
+  max-height: 15em;
+  overflow-y: scroll;
+}
+
+.city__link {
+  color: #0089d0;
+  cursor: pointer;
+  list-style-type: none;
+  min-width: 8.125em;
+
+}
+
+.active {
+  color: #f14635;
+}

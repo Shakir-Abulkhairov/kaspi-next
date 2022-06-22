@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import cn from 'classnames';
 import Modal from '../../ModalBlock/Modal';
 import style from './searchBar.module.css';
+import Cities from '../../Cities/Cities';
 
 function searchBar({ cities, confirm, change, setSearchTerm, searchTerm }) {
   const [visiblePopup, setVisiblePopup] = useState(false);
@@ -58,12 +59,13 @@ function searchBar({ cities, confirm, change, setSearchTerm, searchTerm }) {
             </a>
 
             {visiblePopup &&
-              <Modal
-                toggleVisiblePopupClose={toggleVisiblePopupClose}
-                changeCityName={changeCityName}
-                isActive={isActive}
-                setIsActive={setIsActive}
-              />}
+              <Modal toggleVisiblePopupClose={toggleVisiblePopupClose}>
+                <Cities
+                  changeCityName={changeCityName}
+                  isActive={isActive}
+                  setIsActive={setIsActive} />
+              </Modal>
+            }
           </div>
           {confirm &&
             <div className={cn(style.confirm__city)}>

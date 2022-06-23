@@ -1,7 +1,7 @@
 import { Promo, Services, KaspiShop, SubHeader } from '../components';
 
 export default function Home({ product }) {
-  console.log('06.09.2019' < '06.09.2018')
+
   return (
     <>
       <Promo />

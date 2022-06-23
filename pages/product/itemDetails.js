@@ -5,7 +5,9 @@ import Link from 'next/link';
 import RaitingStar from '../../components/Rating-Star/RatingStar';
 import style from './ItemDetails.module.css';
 import SliderModal from '../../components/SliderBootstrap/Slider-modal/SliderModal';
-const ItemDetails = ({ electronics }) => {
+import BottomSellers from '../../components/BottomTabsInfo/BottomSellers';
+
+const ItemDetails = ({ electronics, bodyBottom, bodyBottom2 }) => {
   const [slider, setSlider] = useState(0);
   const [isAtcive, setIsActive] = useState(false);
 
@@ -34,7 +36,7 @@ const ItemDetails = ({ electronics }) => {
                   {/* <Image width="100%" height="100%" layout="responsive" objectFit="contain" className={style.img} src={electronics.image[slider]} alt="Card image cap" /> */}
                   <div className={style.slider__block}>
                     {
-                      electronics.image.map((img, i) => <div className={`${style.slider} ${slider == i ? style.active : ""}`} onClick={() => handleClickSlider(i)}> <img className={style.img} src={img} alt="Card image cap" /></div>)
+                      electronics.image.map((img, i) => <div key={i} className={`${style.slider} ${slider == i ? style.active : ""}`} onClick={() => handleClickSlider(i)}> <img className={style.img} src={img} alt="Card image cap" /></div>)
                     }
                     {isAtcive &&
                       <Modal toggleVisiblePopupClose={handleSetDisabled} >
@@ -44,23 +46,23 @@ const ItemDetails = ({ electronics }) => {
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
           <div className={style.itemDetails__inner__right}>
             <div className={style.title}>
-              {electronics.title}
+              {electronics.name}
             </div>
-            <div className={style.category}>
-              <span className={style.description_span}>Категория:</span> {electronics.category}
+            <div className={`${style.rating} ${style.bottom_margin}`}>
+              <RaitingStar data={electronics} /> <span className={style.description_span}>({electronics.rating.count} отзыва) </span>
             </div>
-            <div className={style.price}>
-              <span className={style.description_span}>Цена: </span>{electronics.price} $
+            <div className={`${style.price} ${style.bottom_margin}`}>
+              <div className={style.price__header}>Цена</div>
+              <div className={style.price_content}>{electronics.price} ₸</div>
             </div>
-            <div className={style.category}>
-              <RaitingStar data={electronics} /> <span className={style.description_span}>({electronics.rating.count}) отзыв</span>
-            </div>
+
             <div className={style.description}>
-              {electronics.description}
+              {electronics.info.map(item => <div>{item}</div>)}
             </div>
             <Link href="/product">
               <a className={style.link}>
@@ -70,6 +72,7 @@ const ItemDetails = ({ electronics }) => {
           </div>
         </div>
       </div>
+      <BottomSellers info={bodyBottom} name={electronics.name} bodyBottom2={bodyBottom2} />
     </div>
   )
 }
@@ -77,21 +80,29 @@ export async function getServerSideProps() {
   try {
     const response = await fetch('http://localhost:3000/api/producrApi/get-product-details');
     const body = await response.json();
-
-    if (!body) {
+    //bottom-tabs-info
+    const responseBottom = await fetch('http://localhost:3000/api/bottom-tabs-info/bottom-sellers');
+    const bodyBottom = await responseBottom.json();
+    //bottom-tabs-descr
+    const responseBottom1 = await fetch('http://localhost:3000/api/bottom-tabs-info/bottom-description');
+    const bodyBottom2 = await responseBottom1.json();
+    if (!body && !bodyBottom) {
       return {
         notFound: true,
       }
     }
     return {
       props: {
-        electronics: body
+        electronics: body,
+        bodyBottom,
+        bodyBottom2
       }
     }
   } catch (e) {
     return {
       props: {
-        electronics: null
+        electronics: null,
+        bodyBottom: null
       }
     }
   }

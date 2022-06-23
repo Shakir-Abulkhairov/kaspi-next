@@ -29,6 +29,7 @@ export async function getStaticProps() {
     try {
         const response = await fetch('http://localhost:3000/api/bizkreditApi/bizkreditQues');
         const body = await response.json();
+
         if (!body) {
             return {
                 notFound: true,
@@ -36,13 +37,15 @@ export async function getStaticProps() {
         }
         return {
             props: {
-                ques: body
+                ques: body,
+
             }
         }
     } catch (e) {
         return {
             props: {
-                ques: null
+                ques: null,
+
             }
         }
     }

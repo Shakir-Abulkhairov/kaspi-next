@@ -14,7 +14,7 @@ const SearchBar = ({ cities, confirm, change, setSearchTerm, searchTerm }) => {
   useEffect(() => {
     const city = localStorage.getItem('city');
     setNameCity(city);
-  })
+  }, [])
 
   const toggleVisiblePopup = () => {
     setVisiblePopup(true);
@@ -63,7 +63,8 @@ const SearchBar = ({ cities, confirm, change, setSearchTerm, searchTerm }) => {
                 <Cities
                   changeCityName={changeCityName}
                   isActive={isActive}
-                  setIsActive={setIsActive} />
+                  setIsActive={setIsActive}
+                />
               </Modal>
             }
           </div>

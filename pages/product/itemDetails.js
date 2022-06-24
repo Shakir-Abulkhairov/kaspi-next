@@ -7,7 +7,7 @@ import style from './ItemDetails.module.css';
 import SliderModal from '../../components/SliderBootstrap/Slider-modal/SliderModal';
 import BottomSellers from '../../components/BottomTabsInfo/BottomSellers';
 
-const ItemDetails = ({ electronics, bodyBottom, bodyBottom2 }) => {
+const ItemDetails = ({ electronics, bodyBottom }) => {
   const [slider, setSlider] = useState(0);
   const [isAtcive, setIsActive] = useState(false);
 
@@ -62,7 +62,7 @@ const ItemDetails = ({ electronics, bodyBottom, bodyBottom2 }) => {
             </div>
 
             <div className={style.description}>
-              {electronics.info.map(item => <div>{item}</div>)}
+              {electronics.info.map((item, i) => <div key={i}>{item}</div>)}
             </div>
             <Link href="/product">
               <a className={style.link}>
@@ -72,7 +72,7 @@ const ItemDetails = ({ electronics, bodyBottom, bodyBottom2 }) => {
           </div>
         </div>
       </div>
-      <BottomSellers info={bodyBottom} name={electronics.name} bodyBottom2={bodyBottom2} />
+      <BottomSellers name={electronics.name} electronics={electronics} />
     </div>
   )
 }
@@ -80,13 +80,8 @@ export async function getServerSideProps() {
   try {
     const response = await fetch('http://localhost:3000/api/producrApi/get-product-details');
     const body = await response.json();
-    //bottom-tabs-info
-    const responseBottom = await fetch('http://localhost:3000/api/bottom-tabs-info/bottom-sellers');
-    const bodyBottom = await responseBottom.json();
-    //bottom-tabs-descr
-    const responseBottom1 = await fetch('http://localhost:3000/api/bottom-tabs-info/bottom-description');
-    const bodyBottom2 = await responseBottom1.json();
-    if (!body && !bodyBottom) {
+
+    if (!body) {
       return {
         notFound: true,
       }
@@ -94,15 +89,12 @@ export async function getServerSideProps() {
     return {
       props: {
         electronics: body,
-        bodyBottom,
-        bodyBottom2
       }
     }
   } catch (e) {
     return {
       props: {
         electronics: null,
-        bodyBottom: null
       }
     }
   }

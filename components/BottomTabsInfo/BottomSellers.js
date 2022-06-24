@@ -1,9 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import RatingStar from "../Rating-Star/RatingStar";
 import style from './BottomSellers.module.css';
 import Sellers from "./Sellers/Sellers";
 
-function BottomSellers({ name, info, bodyBottom2 }) {
+function BottomSellers({ name, electronics }) {
+
   const [toggleState, setToggleState] = useState(1);
+  const [sellers, setSellers] = useState([]);
+  useEffect(() => {
+    const sellersFetch = async () => {
+      const responseBottom = await fetch('http://localhost:3000/api/bottom-tabs-info/bottom-sellers');
+      const bodyBottom = await responseBottom.json();
+      setSellers(bodyBottom)
+    }
+    sellersFetch()
+  }, []);
+
 
   const toggleTab = (index) => {
     setToggleState(index);
@@ -46,44 +58,53 @@ function BottomSellers({ name, info, bodyBottom2 }) {
           <div
             className={toggleState === 1 ? content : style.content}
           >
-            <Sellers info={info} />
+            <Sellers info={sellers} />
           </div>
 
           <div
             className={toggleState === 2 ? content : style.content}
           >
             <h2>Отзывы {name}</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              voluptatum qui adipisci.
-            </p>
+            <div>
+              {
+                electronics.user_reviews.map((item) => (
+                  <div className={style.bottom__wrapper}>
+                    <div className={style.bottom__left}>
+                      {/* <RatingStar data={item.rating} /> */}
+                      <div>{item.user__name}</div>
+                      <div className={style.bottom__date}>{item.date}</div>
+                    </div>
+                    <div className={style.bottom__right}>
+                      <div dangerouslySetInnerHTML={{ __html: item.comment_html }} ></div>
+                      <div className={style.bottom__users}>{item.useful_cnt} из {item.useful_max} человек посчитали отзыв полезным.</div>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
           </div>
 
           <div
             className={toggleState === 3 ? content : style.content}
           >
             <h2>Характеристики {name}</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sed
-              nostrum rerum laudantium totam unde adipisci incidunt modi alias!
-              Accusamus in quia odit aspernatur provident et ad vel distinctio
-              recusandae totam quidem repudiandae omnis veritatis nostrum
-              laboriosam architecto optio rem, dignissimos voluptatum beatae
-              aperiam voluptatem atque. Beatae rerum dolores sunt.
-            </p>
+            <dl className={style.specification_list}>
+              <dt className={style.specification_list__term}><h4>Основные характеристики</h4></dt>
+
+              <dd className={style.specification_list__specs}>
+                <dl className={style.specification_list__spec}>
+                  <dt className={style.specification_list__spec_term}>
+                    <span className={style.specification_list__spec_term_text}>Максимальный вес пользователя</span>
+                  </dt>
+                  <dd className={style.specification_list__spec_term_definition}>100 кг</dd>
+                </dl>
+              </dd>
+            </dl>
           </div>
           <div
             className={toggleState === 4 ? content : style.content}
           >
-            <h2>Content 4</h2>
-            <p>
-              {
-                bodyBottom2.map((item, i) => (
-                  // <div key={i}>{item.descr}</div>
-                  console.log(item.descr)
-                ))
-              }
-            </p>
+            <div dangerouslySetInnerHTML={{ __html: electronics.descr }} className={style.descr}></div>
           </div>
 
         </div>

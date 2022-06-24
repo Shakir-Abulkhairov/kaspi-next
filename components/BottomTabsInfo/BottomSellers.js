@@ -67,8 +67,8 @@ function BottomSellers({ name, electronics }) {
             <h2>Отзывы {name}</h2>
             <div>
               {
-                electronics.user_reviews.map((item) => (
-                  <div className={style.bottom__wrapper}>
+                electronics.user_reviews.map((item, i) => (
+                  <div className={style.bottom__wrapper} key={i}>
                     <div className={style.bottom__left}>
                       {/* <RatingStar data={item.rating} /> */}
                       <div>{item.user__name}</div>

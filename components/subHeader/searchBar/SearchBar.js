@@ -4,7 +4,7 @@ import Modal from '../../ModalBlock/Modal';
 import style from './searchBar.module.css';
 import Cities from '../../Cities/Cities';
 
-function searchBar({ cities, confirm, change, setSearchTerm, searchTerm }) {
+const SearchBar = ({ cities, confirm, change, setSearchTerm, searchTerm }) => {
   const [visiblePopup, setVisiblePopup] = useState(false);
   const [nameCity, setNameCity] = useState(null);
   const [isActive, setIsActive] = useState({
@@ -92,4 +92,4 @@ function searchBar({ cities, confirm, change, setSearchTerm, searchTerm }) {
   )
 }
 
-export default searchBar
+export default SearchBar

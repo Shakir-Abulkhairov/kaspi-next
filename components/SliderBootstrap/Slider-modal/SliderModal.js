@@ -7,7 +7,7 @@ function SliderModal({ img, slider }) {
         <div id="carouselExampleControlsNoTouching" className="carousel slide" data-bs-touch="false" data-bs-interval="false">
           <div className="carousel-inner">
             {img.map((src, i) => (
-              <div className={`carousel-item ${i == slider ? 'active' : ''} ${style.item}`}>
+              <div key={i} className={`carousel-item ${i == slider ? 'active' : ''} ${style.item}`}>
                 <img src={src} className={`d-block w-100 ${style.img}`} alt="..." />
               </div>
             ))

@@ -3,12 +3,6 @@
     "id": 1,
     "title": "Genau TR50",
     "price": 219.790,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h0c/he0/50926904180766/genau-tr50-26800030-1-Container.jpg",
     "rating": {
       "rate": 5,
@@ -19,13 +13,6 @@
     "id": 2,
     "title": "Genau X30",
     "price": 159.890,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h55/h9e/50926895366174/genau-x30-26800031-1-Container.jpg",
     "rating": {
       "rate": 5,
@@ -36,13 +23,6 @@
     "id": 3,
     "title": "ERSPORT S911",
     "price": 199.920,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/hb2/ha8/31836716531742/ersport-s911-100017915-1-Container.jpg",
     "rating": {
       "rate": 5,
@@ -53,13 +33,6 @@
     "id": 4,
     "title": "Genau Cardio Concept",
     "price": 245.000,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h49/haa/50984859336734/garden-s900-101685703-1-Container.jpg",
     "rating": {
       "rate": 5,
@@ -70,13 +43,6 @@
     "id": 5,
     "title": "Xiaomi Kingsmith WalkingPad R1 Pro",
     "price": 245.000,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/hf0/he2/32806810386462/xiaomi-kingsmith-walkingpad-r1-pro-100688380-1-Container.jpg",
     "rating": {
       "rate": 5,
@@ -87,13 +53,6 @@
     "id": 6,
     "title": "Genau Cardio Concept ",
     "price": 175.790,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h4b/h7b/50927029846046/genau-cardio-concept-100552781-1-Container.jpg",
     "rating": {
       "rate": 5,
@@ -104,13 +63,6 @@
     "id": 7,
     "title": "Xiaomi Kingsmith WalkingPad R1 Pro",
     "price": 249.772,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/hf0/he2/32806810386462/xiaomi-kingsmith-walkingpad-r1-pro-100688380-1-Container.jpg",
     "rating": {
       "rate": 5,
@@ -121,13 +73,6 @@
     "id": 8,
     "title": "ERSPORT 980 DS PRO",
     "price": 298.000,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h3a/h86/49022850170910/ersport-8810-komfort-belyj-102737407-1.jpg",
     "rating": {
       "rate": 1.9,
@@ -138,13 +83,6 @@
     "id": 9,
     "title": "IVI S900 ",
     "price": 245.000,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h3a/h86/49022850170910/ersport-8810-komfort-belyj-102737407-1.jpg",
     "rating": {
       "rate": 3.3,
@@ -155,13 +93,6 @@
     "id": 10,
     "title": "HYGGE HG-T42AJ",
     "price": 144.999,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h09/hd8/47525424889886/hygge-hg-t42aj-102985764-1.jpg",
     "rating": {
       "rate": 2.9,
@@ -172,13 +103,6 @@
     "id": 11,
     "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
     "price": 199.686,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h84/h7a/33207595565086/xiaomi-kingsmith-walkingpad-a1-pro-100726814-1-Container.jpg",
     "rating": {
       "rate": 4.8,
@@ -189,13 +113,6 @@
     "id": 12,
     "title": "Xiaomi KingSmith Walking Pad R2 TRR2F",
     "price": 279.998,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h9a/hd1/49846868967454/xiaomi-kingsmith-walking-pad-r2-101929146-1-Container.jpg",
     "rating": {
       "rate": 4.8,
@@ -206,13 +123,6 @@
     "id": 13,
     "title": "HARDSPORT HS1956",
     "price": 245.450,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h78/h17/34307170107422/hardsport-hs1956-101451465-1.jpg",
     "rating": {
       "rate": 2.9,
@@ -223,13 +133,6 @@
     "id": 14,
     "title": "Genau Crown G530",
     "price": 397.450,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/hec/hd4/50927334424606/genau-crown-g530-100320771-1-Container.jpg",
     "rating": {
       "rate": 2.2,
@@ -240,13 +143,6 @@
     "id": 15,
     "title": "ART FiT S900DS",
     "price": 397.450,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h99/h82/49789722558494/art-fit-s900ds-101045920-1-Container.jpg",
     "rating": {
       "rate": 2.6,
@@ -257,13 +153,6 @@
     "id": 16,
     "title": "ERSPORT Komfort 8810 черный",
     "price": 397.450,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h69/h4c/49022850465822/ersport-8810-komfort-cernyj-102737390-1.jpg",
     "rating": {
       "rate": 2.9,
@@ -274,13 +163,6 @@
     "id": 17,
     "title": "ERSPORT Premium 7710",
     "price": 159.450,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h43/hf7/48065772617758/ersport-7710-premium-102737459-1.jpg",
     "rating": {
       "rate": 3.8,
@@ -291,12 +173,6 @@
     "id": 18,
     "title": "ERSPORT Ultimate Fitness A7",
     "price": 185.000,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
     "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h8b/hce/33548844826654/ersport-ultimate-fitness-a7-100858074-1.jpg",
     "rating": {
@@ -308,13 +184,6 @@
     "id": 19,
     "title": "Xiaomi KINGSMITH WalkingPad P1",
     "price": 199.990,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/h1f/ha1/51030845259806/xiaomi-kingsmith-walkingpad-p1-105007644-1.jpg",
     "rating": {
       "rate": 4.5,
@@ -325,13 +194,6 @@
     "id": 20,
     "title": "HARDSPORT T1955",
     "price": 489.000,
-    "description": [
-      "- тип: электрическая",
-      "- складная: да",
-      "- максимальный вес пользователя: 120 кг",
-      "- ширина бегового полотна: 42 см"
-    ],
-    "category": "электрическая",
     "image": "https://resources.cdn-kaspi.kz/medias/sys_master/images/images/haf/h20/50050778791966/hardsport-t1955-104475277-1.jpg",
     "rating": {
       "rate": 3.6,

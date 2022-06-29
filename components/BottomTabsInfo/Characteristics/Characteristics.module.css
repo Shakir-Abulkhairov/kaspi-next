@@ -1,0 +1,103 @@
+.specification_list__el {
+  margin: 0 auto 14px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.specification_list__el:after,
+.specification_list__el::before {
+  display: table;
+  content: " ";
+}
+
+.specification_list__el:after {
+  clear: both;
+}
+
+.specification_list__el:first-of-type .specification_list__term,
+.specification_list__el:first-of-type .specification_list__specs {
+  padding-top: 21px;
+  padding-bottom: 21px;
+  border-top: none;
+}
+
+.specification_list__term {
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  width: 25%;
+  vertical-align: top;
+  position: relative;
+  padding: 35px 35px 35px 0;
+}
+
+.specification_list__specs {
+  position: relative;
+  margin-right: auto;
+  float: left;
+  width: 75%;
+  vertical-align: top;
+  margin-left: 0;
+  border-top: 1px solid #e5e5e5;
+  padding: 35px 0;
+}
+
+.specification_list__spec {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.specification_list__spec ::before {
+  display: table;
+  content: " ";
+}
+
+.specification_list__spec::after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+.specification_list__spec_term {
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 33.33333%;
+  padding-left: 0;
+  padding-right: 0;
+  background: #fff;
+  margin: 0;
+}
+
+.specification_list__spec_term::before {
+  content: '................................................................................';
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: 0;
+  color: #ccc;
+  font-size: 17px;
+  line-height: 0;
+}
+
+.specification_list__spec_term_text {
+  z-index: 2;
+  position: relative;
+  display: inline;
+  padding-right: 3px;
+  background: #fff;
+}
+
+.specification_list__spec_term_definition {
+  position: relative;
+  float: left;
+  width: 66.66667%;
+  padding-right: 10px;
+  padding-left: 3px;
+  margin: 0;
+  background: #fff;
+}

@@ -1,25 +1,34 @@
 import { useState, useEffect } from "react";
+import Link from 'next/link';
 import RatingStar from "../Rating-Star/RatingStar";
 import style from './BottomSellers.module.css';
 import Sellers from "./Sellers/Sellers";
+import Reviews from "./Reviews/Reviews";
+import Characteristics from "./Characteristics/Characteristics";
 
 function BottomSellers({ name, electronics }) {
 
   const [toggleState, setToggleState] = useState(1);
   const [sellers, setSellers] = useState([]);
+
+  const sellersFetch = async () => {
+    const responseBottom = await fetch('http://localhost:3000/api/producrApi/get-product-details');
+    const bodyBottom = await responseBottom.json();
+    setSellers(bodyBottom)
+  }
+
   useEffect(() => {
-    const sellersFetch = async () => {
-      const responseBottom = await fetch('http://localhost:3000/api/bottom-tabs-info/bottom-sellers');
-      const bodyBottom = await responseBottom.json();
-      setSellers(bodyBottom)
-    }
     sellersFetch()
   }, []);
-
 
   const toggleTab = (index) => {
     setToggleState(index);
   };
+
+  const checkTab = (tab) => {
+    return tab ? true : false
+  }
+
   //styles
   const tabs = `${style.tabs} ${style.active__tabs}`;
   const content = `${style.content} ${style.active__content}`;
@@ -28,85 +37,66 @@ function BottomSellers({ name, electronics }) {
     <div className={style.container}>
       <div className={style.tabs__content}>
         <ul className={style.bloc__tabs}>
-          <li
+          {checkTab(sellers) && <li
             className={toggleState === 1 ? tabs : style.tabs}
             onClick={() => toggleTab(1)}
           >
             Продавцы
-          </li>
-          <li
+          </li>}
+          {checkTab(electronics.user_reviews) && <li
             className={toggleState === 2 ? tabs : style.tabs}
             onClick={() => toggleTab(2)}
           >
             Отзывы
-          </li>
-          <li
+          </li>}
+          {checkTab(electronics.charac) && <li
             className={toggleState === 3 ? tabs : style.tabs}
             onClick={() => toggleTab(3)}
           >
             Характеристики
-          </li>
-          <li
+          </li>}
+          {checkTab(electronics.descr) && <li
             className={toggleState === 4 ? tabs : style.tabs}
             onClick={() => toggleTab(4)}
           >
             Описание
-          </li>
+          </li>}
         </ul>
+        {/*     Sellers     */}
 
         <div className={style.content__tabs}>
-          <div
+          {checkTab(sellers) && <div
             className={toggleState === 1 ? content : style.content}
           >
-            <Sellers info={sellers} />
-          </div>
+            <Link href='/address/SellersAddress'>
+              <a>
+                <Sellers info={sellers.sellers} />
+              </a>
+            </Link>
 
-          <div
+          </div>}
+          {/*     Reviews     */}
+
+          {checkTab(electronics.user_reviews) && <div
             className={toggleState === 2 ? content : style.content}
           >
             <h2>Отзывы {name}</h2>
-            <div>
-              {
-                electronics.user_reviews.map((item, i) => (
-                  <div className={style.bottom__wrapper} key={i}>
-                    <div className={style.bottom__left}>
-                      {/* <RatingStar data={item.rating} /> */}
-                      <div>{item.user__name}</div>
-                      <div className={style.bottom__date}>{item.date}</div>
-                    </div>
-                    <div className={style.bottom__right}>
-                      <div dangerouslySetInnerHTML={{ __html: item.comment_html }} ></div>
-                      <div className={style.bottom__users}>{item.useful_cnt} из {item.useful_max} человек посчитали отзыв полезным.</div>
-                    </div>
-                  </div>
-                ))
-              }
-            </div>
-          </div>
+            <Reviews data={electronics.user_reviews} />
+          </div>}
+          {/*     Characteristics     */}
 
-          <div
+          {checkTab(electronics.charac) && <div
             className={toggleState === 3 ? content : style.content}
           >
             <h2>Характеристики {name}</h2>
-            <dl className={style.specification_list}>
-              <dt className={style.specification_list__term}><h4>Основные характеристики</h4></dt>
+            <Characteristics data={electronics.charac} />
+          </div>}
+          {/*     Description     */}
 
-              <dd className={style.specification_list__specs}>
-                <dl className={style.specification_list__spec}>
-                  <dt className={style.specification_list__spec_term}>
-                    <span className={style.specification_list__spec_term_text}>Максимальный вес пользователя</span>
-                  </dt>
-                  <dd className={style.specification_list__spec_term_definition}>100 кг</dd>
-                </dl>
-              </dd>
-            </dl>
-          </div>
-          <div
+          {checkTab(electronics.descr) && <div
             className={toggleState === 4 ? content : style.content}
           >
-            <div dangerouslySetInnerHTML={{ __html: electronics.descr }} className={style.descr}></div>
-          </div>
-
+            <div dangerouslySetInnerHTML={{ __html: electronics?.descr }} className={style.descr}></div></div>}
         </div>
       </div>
     </div>

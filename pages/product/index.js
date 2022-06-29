@@ -25,8 +25,6 @@ function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
   const handleChangeTotalPrice = (totalPrice) => {
     dispatch(addTotalCount(totalPrice))
   }
-  console.log(items)
-
 
   const [currentPage, setCurrentPage] = useState(1);
   const [productPerPage] = useState(10);
@@ -43,9 +41,7 @@ function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
     <div className={style.wrapper}>
       <div className="container">
         <div className={style.products__block}>
-          {
-            category.map((category) => <LeftCatList key={category.id} category={category} />)
-          }
+          <LeftCatList key={category.id} category={category} />
           <div className={style.block__inner}>
             {
               currentProduct && currentProduct.filter((val) => {

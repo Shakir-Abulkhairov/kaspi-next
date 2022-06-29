@@ -122,6 +122,9 @@
   font-weight: 700;
   text-align: center;
 }
+.back{
+  font-size: 37px;
+}
 
 .back:hover{
   transition: all .3s;

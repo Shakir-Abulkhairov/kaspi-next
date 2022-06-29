@@ -12,6 +12,7 @@ function NavBar({ product }) {
             <div className={style.nav__list}>
               {
                 product && product.map((item, i) => {
+                  console.log(item)
                   return (
                     <div className={style.nav__item} key={i}>
                       <Link href={`/cat/${item.id}`}>

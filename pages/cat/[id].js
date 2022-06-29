@@ -8,16 +8,11 @@ function ItemDetails({ category }) {
     <>
       <div className={style.wrapper}>
         <div className='container'>
-          {
-            category.map((category) => {
-              return (
-                <div className={style.content} key={category.id}>
-                  <LeftCatList category={category} />
-                  <RightCatList category={category} />
-                </div>
-              )
-            })
-          }
+          {category.name}
+          <div className={style.content} key={category.id}>
+            <LeftCatList category={category} />
+            <RightCatList category={category} />
+          </div>
         </div>
       </div>
     </>

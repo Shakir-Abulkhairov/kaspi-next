@@ -18,9 +18,9 @@ function SubCategoryList({ subcat, saveOpen, saveChange }) {
       <ul>
         <div className={style.sub__name}>{subcat.name} <span className='sub__count'>({subcat.count})</span></div>
         {toggle &&
-          subcat.subcatProduct_arr.map((subcat) => {
+          subcat && subcat.subcatProduct_arr.map((subcat) => {
             return (
-              <>
+              <div key={subcat.id}>
                 <li className={style.subcat__links}>
                   <Link href={'/product'}>
                     <a>
@@ -28,9 +28,10 @@ function SubCategoryList({ subcat, saveOpen, saveChange }) {
                     </a>
                   </Link>
                 </li>
-              </>
+              </div>
             )
           })
+
         }
       </ul>
     </div>

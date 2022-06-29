@@ -31,21 +31,19 @@
 
 .tabs::before{
   content: '';
-    display: block;
-    border-left: 1px solid #e5e5e5;
-    width: 1px;
-    height: 23px;
-    position: absolute;
-    top: 50%;
-    left: 1px;
-    margin-top: -12px;
+  display: block;
+  border-left: 1px solid #e5e5e5;
+  width: 1px;
+  height: 23px;
+  position: absolute;
+  top: 50%;
+  left: 1px;
+  margin-top: -12px;
 }
-.tabs::first-child:before{
-  border-left: 1px solid transparent;
+.tabs:first-child:before{
+  border-left: none;
 }
-/* .tabs:not(:last-child) {
-  border-right: 1px solid rgba(0, 0, 0, 0.274);
-} */
+
 
 .active__tabs {
   background: #e6e6e6;
@@ -108,89 +106,5 @@
   display: block;
   margin: 0 auto;
 }
-.bottom__wrapper {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  padding: 21px 0;
-  display:flex;
-  justify-content:space-between;
-}
-.bottom__right{
-  width: 75%;
-  margin: 0 0 14px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.bottom__date,.bottom__users{
-  color: #ccc;
-  font-weight: 400;
-}
-.specification_list{
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-.specification_list__term,.specification_list__specs{
-  padding-top: 21px;
-  padding-bottom: 21px;
-  border-top: none;
-}
-.specification_list__term{
-  float: left;
-  width: 25%;
-  padding: 35px 35px 35px 0;
-}
-.specification_list__spec{
-  max-width: 100%;
-  width: 100%;
-  margin: 0;
-}
 
-.specification_list__spec ::before{
-  display: table;
-  content: " ";
-}
-.specification_list__spec_term {
-  overflow: hidden;
-  position: relative;
-  float: left;
-  width: 40%;
-  padding-left: 0;
-  padding-right: 0;
-  background: #fff;
-  margin: 0;
-}
-.specification_list__spec_term::before{
-  content: '................................................................................';
-  z-index: 1;
-  display: block;
-  position: absolute;
-  top: 9px;
-  left: 0;
-  color: #ccc;
-  font-size: 17px;
-  line-height: 0;
-}
-.specification_list__spec_term_text {
-  z-index: 2;
-  position: relative;
-  display: inline;
-  padding-right: 3px;
-  background: #fff;
-}
-.specification_list__spec_term_definition {
-  position: relative;
-  float: left;
-  padding-right: 10px;
-  padding-left: 3px;
-  margin: 0;
-  background: #fff;
-}
-.specification_list__spec_term_definition::after {
-  display: table;
-  content: " ";
-  clear: both;
-}
+/*table*/

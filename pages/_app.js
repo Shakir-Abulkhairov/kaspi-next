@@ -36,15 +36,17 @@ MyApp.getInitialProps = async (appContext) => {
   // calls page's `getInitialProps` and fills `appProps.pageProps`
   const appProps = await App.getInitialProps(appContext);
   //product
-  const res1 = await fetch('http://localhost:3000/api/producrApi/get-top-cat-list');
+
+  const res1 = await fetch('http://qoldan-dev.com/api/market/mt_prod_cat/find_all'); //<=== ошибка CORS,библиотека установлена
   const body1 = await res1.json();
+
   //cities
   const res2 = await fetch('http://localhost:3000/api/producrApi/get-cities-kaz');
   const body2 = await res2.json();
   //category
   const res3 = await fetch(`http://localhost:3000/api/producrApi/get-cat-info`);
   const body3 = await res3.json();
-
+  //http://dev.qoldan.com/api/market/mt_prod_cat/get_cat_info?id=1
 
   //console.log(data)
 

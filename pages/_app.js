@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps, product, cities, category }) {
   return (
     <>
       <Provider store={store}>
-        <Layout product={product} cities={cities} change={change}
+        <Layout product={product.category} cities={cities} change={change}
           confirm={confirm} searchTerm={searchTerm}
           setSearchTerm={setSearchTerm}>
 
@@ -37,7 +37,7 @@ MyApp.getInitialProps = async (appContext) => {
   const appProps = await App.getInitialProps(appContext);
   //product
 
-  const res1 = await fetch('http://qoldan-dev.com/api/market/mt_prod_cat/find_all'); //<=== ошибка CORS,библиотека установлена
+  const res1 = await fetch('http://localhost:3000/api/producrApi/get-top-cat-list'); //<== ошибка CORS,библиотека установлена
   const body1 = await res1.json();
 
   //cities

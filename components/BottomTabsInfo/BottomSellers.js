@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import Link from 'next/link';
-import RatingStar from "../Rating-Star/RatingStar";
 import style from './BottomSellers.module.css';
 import Sellers from "./Sellers/Sellers";
 import Reviews from "./Reviews/Reviews";
@@ -68,12 +66,7 @@ function BottomSellers({ name, electronics }) {
           {checkTab(sellers) && <div
             className={toggleState === 1 ? content : style.content}
           >
-            <Link href='/address/SellersAddress'>
-              <a>
-                <Sellers info={sellers.sellers} />
-              </a>
-            </Link>
-
+            <Sellers info={sellers.sellers} />
           </div>}
           {/*     Reviews     */}
 

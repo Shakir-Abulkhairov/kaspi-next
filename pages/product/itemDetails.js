@@ -54,7 +54,7 @@ const ItemDetails = ({ electronics, bodyBottom }) => {
               {electronics.name}
             </div>
             <div className={`${style.rating} ${style.bottom_margin}`}>
-              <RaitingStar data={electronics} /> <span className={style.description_span}>({electronics.rating.count} отзыва) </span>
+              <RaitingStar data={electronics.rating.rate} /> <span className={style.description_span}>({electronics.rating.count} отзыва) </span>
             </div>
             <div className={`${style.price} ${style.bottom_margin}`}>
               <div className={style.price__header}>Цена</div>

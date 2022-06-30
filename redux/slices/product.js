@@ -14,11 +14,15 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 const addProd = createSlice({
   name: "product",
   initialState: {
-    items: []
+    items: [],
+    toggleState: 2
   },
   reducers: {
     addProdAc(state, action) {
       state.items.push(action.payload);
+    },
+    setToggleState(state, { payload }) {
+      state.toggleState = payload
     }
   },
 
@@ -26,4 +30,4 @@ const addProd = createSlice({
 
 
 export default addProd.reducer;
-export const { addProdAc } = addProd.actions;
+export const { addProdAc, setToggleState } = addProd.actions;

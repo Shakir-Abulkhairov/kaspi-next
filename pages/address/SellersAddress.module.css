@@ -32,3 +32,27 @@
 .phone{
   margin-right: 7px;
 }
+.profile__image {
+  position: relative;
+  float: left;
+  width: 16.66667%;
+}
+.sellers_profile__inner{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.profile__image img{
+  width: 128px;
+  height: 80px;
+  border: 1px solid #dcdcdc;
+}
+.sellers_profile_descr {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  width: 83.33333%;
+  padding-left: 10px;
+  padding-right: 10px;
+}

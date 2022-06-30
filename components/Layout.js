@@ -3,7 +3,7 @@ import Header from './Header/Header';
 import SubHeader from './subHeader/SubHeader';
 import Footer from './Footer/Footer';
 const Layout = ({ children, product, cities, change, confirm, setSearchTerm, searchTerm }) => {
-  console.log(product)
+
   return (
     <>
       <Head>

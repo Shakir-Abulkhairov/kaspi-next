@@ -25,7 +25,7 @@ function Products({ products, handleAddCard, handleChangeTotalPrice }) {
                     </div>
                     <ul className={style.card__block}>
                         <div className={style.ratings}>
-                            <RaitingStar data={products} /> <span>({products.rating.count})</span>
+                            <RaitingStar data={products.rating.rate} /> <span>({products.rating.count})</span>
                         </div>
                         <li className={style.card__item}>
                             <div className={style.card__price_text}>Цена</div>

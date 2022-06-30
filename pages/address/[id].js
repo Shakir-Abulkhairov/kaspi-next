@@ -1,28 +1,125 @@
 import cn from 'classnames';
+import Link from 'next/Link';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setToggleState } from './../../redux/slices/product';
+import RatingStar from '../../components/Rating-Star/RatingStar';
+import styleTabs from '../../components/BottomTabsInfo//BottomSellers.module.css';
 import style from './SellersAddress.module.css';
-function SellersAddress() {
+
+function SellersAddress({ children, info }) {
+  const dispatch = useDispatch();
+  const { toggleState } = useSelector(({ addProd }) => addProd)
+
+  const toggleTab = (index) => {
+    dispatch(setToggleState(index));
+  };
+
+  useEffect(() => {
+    toggleTab(2)
+  }, [])
+
+  //styles
+  const tabs = `${styleTabs.tabs} ${styleTabs.active__tabs}`;
+  const content = `${styleTabs.content} ${styleTabs.active__content}`;
   return (
     <>
       <div className={style.wrapper}>
-        <div className={cn(style.container, style.sellers_profile__block)}>
-          <div className={style.sellers_profile__inner}>
-            <h1 className={style.sellers_profile_name}>GENAU в городе Алматы</h1>
-            <div className={style.sellers_profile_date_create}>В Kaspi Магазине с 26.07.2019 г.</div>
-            {/* ratin star*/}
-            <div className={style.sellers_profile_ratings_info}>Рейтинг рассчитан на основе оценок покупателей и качества работы продавца</div>
-            <div className={style.sellers_profile__contact}>
-              <span className={style.phone}>
-                <img src='https://resources.cdn-kaspi.kz/shop/front/sa/stable/desktop/images/small-smartphone.png' />
-              </span>
-              <span className={style.number}>
-                +7 (707) 200-13-08
-              </span>
-            </div>
-          </div>
-        </div>
+        {
+          info && (
+            <>
+              <div className={cn(style.container, style.sellers_profile__block)}>
+                <div className={style.sellers_profile__inner}>
+                  {
+                    info?.img && <div className={style.profile__image}>
+                      <img src='https://resources.cdn-kaspi.kz/shop/medias/sys_master/root/h94/h89/50625996423198/-.png' alt="profile_image" />
+                    </div>
+                  }
+                  <div className={style.sellers_profile_descr}>
+                    <h1 className={style.sellers_profile_name}>{info.name}</h1>
+                    <div className={style.sellers_profile_date_create}>В Kaspi Магазине с {info.data_create} г.</div>
+                    <RatingStar data={5} />
+                    <div className={style.sellers_profile_ratings_info}>Рейтинг рассчитан на основе оценок покупателей и качества работы продавца</div>
+                    <div className={style.sellers_profile__contact}>
+                      <span className={style.phone}>
+                        <img src='https://resources.cdn-kaspi.kz/shop/front/sa/stable/desktop/images/small-smartphone.png' />
+                      </span>
+                      <span className={style.number}>
+                        {info.contacts}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={styleTabs.tabs__content}>
+                <ul className={styleTabs.bloc__tabs}>
+                  {<Link href='/address-review/Review-cart'>
+                    <a>
+                      <li
+                        className={toggleState === 1 ? tabs : styleTabs.tabs}
+                        onClick={() => toggleTab(1)}
+                      >
+                        Отзывы
+                      </li>
+                    </a>
+                  </Link>}
+
+
+                  <Link href='/address/SellersAddress'>
+                    <a>
+                      <li
+                        className={toggleState === 2 ? tabs : styleTabs.tabs}
+                        onClick={() => toggleTab(2)}
+                      >Пункты самовывоза
+                      </li>
+                    </a>
+                  </Link>
+                </ul>
+
+
+                <div className={styleTabs.content__tabs}>
+                  <div
+                    className={toggleState === 1 ? content : styleTabs.content}>
+                    {children}
+                  </div>
+
+
+                  <div
+                    className={toggleState === 2 ? content : styleTabs.content}
+                  >
+                    {info.address}
+                    {info.work_schedule}
+
+                  </div>
+                </div>
+              </div>
+            </>
+          )
+        }
       </div>
     </>
   )
 }
-
+export async function getServerSideProps() {
+  try {
+    const response = await fetch('http://localhost:3000/api/get-seller-cart/get-seller-cart');
+    const body = await response.json();
+    if (!body) {
+      return {
+        notFound: true,
+      }
+    }
+    return {
+      props: {
+        info: body,
+      }
+    }
+  } catch (e) {
+    return {
+      props: {
+        info: null,
+      }
+    }
+  }
+}
 export default SellersAddress

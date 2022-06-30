@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import RatingStar from '../../Rating-Star/RatingStar';
 import style from './Sellers.module.css';
 function Sellers() {
@@ -17,16 +18,24 @@ function Sellers() {
 
       {sellers && <div className={style.content}>
         <div className={style.sellers__info}>
-          <div>
-            {sellers.name}
-          </div>
+          <Link href='/address/SellersAddress'>
+            <a>
+              <div>
+                {sellers.name}
+              </div>
+            </a>
+          </Link>
           <div className={style.sellers__rating}>
             <div>
-              <RatingStar data={sellers} />
+              <RatingStar data={sellers.rating.rate} />
             </div>
-            <div>
-              ( {sellers.rating.count} отзыва)
-            </div>
+            <Link href='/address-review/Review-cart'>
+              <a>
+                <div>
+                  ( {sellers.rating.count} отзыва)
+                </div>
+              </a>
+            </Link>
           </div>
         </div>
         <div className={style.delivery}>

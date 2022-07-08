@@ -1,9 +1,12 @@
-import SellersAddress from "../address/[id]";
+import SellersAddress from "../seller/[id]";
 import { useEffect, Fragment } from 'react';
-import { useDispatch } from 'react-redux';
-import { setToggleState } from './../../redux/slices/product';
-function AddressReview({ reviews, info }) {
+import { useDispatch, useSelector } from 'react-redux';
+import { setToggleState, addProdAc } from './../../redux/slices/product';
 
+function AddressReview({ reviews }) {
+
+  const { toggleState, items } = useSelector(({ addProd }) => addProd)
+  console.log(items && items)
   const dispatch = useDispatch();
   const changeActive = () => {
     dispatch(setToggleState(1))
@@ -12,9 +15,9 @@ function AddressReview({ reviews, info }) {
   return (
     <>
 
-      <SellersAddress info={info} >
+      <SellersAddress info={items}>
         {
-          reviews && reviews.user_reviews.map((item, i) => {
+          reviews && reviews.map((item, i) => {
             return (
               <Fragment key={i}>
                 <span>{item.user__name}</span>
@@ -30,8 +33,6 @@ function AddressReview({ reviews, info }) {
 }
 export async function getStaticProps() {
   try {
-    const response1 = await fetch('http://localhost:3000/api/get-seller-cart/get-seller-cart');
-    const body1 = await response1.json();
     const response = await fetch('http://localhost:3000/api/get-seller-cart/get-review');
     const body = await response.json();
 
@@ -43,7 +44,6 @@ export async function getStaticProps() {
     return {
       props: {
         reviews: body,
-        info: body1
       }
     }
   } catch (e) {

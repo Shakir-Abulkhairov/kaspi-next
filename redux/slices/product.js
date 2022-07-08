@@ -14,12 +14,12 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 const addProd = createSlice({
   name: "product",
   initialState: {
-    items: [],
+    items: null,
     toggleState: 2
   },
   reducers: {
     addProdAc(state, action) {
-      state.items.push(action.payload);
+      state.items = action.payload;
     },
     setToggleState(state, { payload }) {
       state.toggleState = payload

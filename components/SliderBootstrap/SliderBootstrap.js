@@ -44,7 +44,7 @@ function SliderBootstrap({ product }) {
         >
           {/* add IMAGES next!!! */}
           <div className={style.hot_images_row}>
-            {product.map((item) => {
+            {product && product.map((item) => {
               return (
                 <Link href='/product' key={item.id}>
                   <a className={style.slider__item}>

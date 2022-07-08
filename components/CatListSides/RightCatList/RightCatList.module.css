@@ -33,3 +33,8 @@
 .right {
   width: 71%;
 }
+@media (max-width: 768px) {
+  .right{
+    display:none;
+  }
+}

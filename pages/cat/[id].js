@@ -10,7 +10,9 @@ function ItemDetails({ category }) {
         <div className='container'>
           {category.name}
           <div className={style.content} key={category.id}>
-            <LeftCatList category={category} />
+            <div className={style.left}>
+              <LeftCatList category={category} />
+            </div>
             <RightCatList category={category} />
           </div>
         </div>

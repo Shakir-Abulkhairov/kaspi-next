@@ -21,10 +21,11 @@
   position: absolute;
   cursor: pointer;
 }
-.arrow__first{
-  position: absolute;
-  left: 5px;
+.main__name{
+  margin-top: 8px;
 }
+
+
 
 .circle{
   color: #e5e5e5;
@@ -36,6 +37,11 @@
   justify-content:center;
   align-items:flex-end;;
   border: 1px solid #e5e5e5;
+  position: absolute;
+  left: 3px;
+}
+.circle img{
+  width:30px;
 }
 
 .circle:hover,.active{
@@ -68,4 +74,11 @@
 }
 .subcat__links:hover:before {
   border: 1px solid black;
+}
+.accordion_deactive {
+  display: none;
+}
+
+.accordion_active {
+  display: block;
 }

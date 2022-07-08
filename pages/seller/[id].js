@@ -2,17 +2,19 @@ import cn from 'classnames';
 import Link from 'next/Link';
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setToggleState } from './../../redux/slices/product';
+import { setToggleState, addProdAc } from '../../redux/slices/product';
 import RatingStar from '../../components/Rating-Star/RatingStar';
 import styleTabs from '../../components/BottomTabsInfo//BottomSellers.module.css';
 import style from './SellersAddress.module.css';
 
 function SellersAddress({ children, info }) {
   const dispatch = useDispatch();
-  const { toggleState } = useSelector(({ addProd }) => addProd)
+
+  const { toggleState, items } = useSelector(({ addProd }) => addProd)
 
   const toggleTab = (index) => {
     dispatch(setToggleState(index));
+    dispatch(addProdAc(info))
   };
 
   useEffect(() => {
@@ -26,18 +28,18 @@ function SellersAddress({ children, info }) {
     <>
       <div className={style.wrapper}>
         {
-          info && (
+          items && (
             <>
               <div className={cn(style.container, style.sellers_profile__block)}>
                 <div className={style.sellers_profile__inner}>
                   {
-                    info?.img && <div className={style.profile__image}>
+                    items?.img && <div className={style.profile__image}>
                       <img src='https://resources.cdn-kaspi.kz/shop/medias/sys_master/root/h94/h89/50625996423198/-.png' alt="profile_image" />
                     </div>
                   }
                   <div className={style.sellers_profile_descr}>
-                    <h1 className={style.sellers_profile_name}>{info.name}</h1>
-                    <div className={style.sellers_profile_date_create}>В Kaspi Магазине с {info.data_create} г.</div>
+                    <h1 className={style.sellers_profile_name}>{items.name}</h1>
+                    <div className={style.sellers_profile_date_create}>В Kaspi Магазине с {items.data_create} г.</div>
                     <RatingStar data={5} />
                     <div className={style.sellers_profile_ratings_info}>Рейтинг рассчитан на основе оценок покупателей и качества работы продавца</div>
                     <div className={style.sellers_profile__contact}>
@@ -45,7 +47,7 @@ function SellersAddress({ children, info }) {
                         <img src='https://resources.cdn-kaspi.kz/shop/front/sa/stable/desktop/images/small-smartphone.png' />
                       </span>
                       <span className={style.number}>
-                        {info.contacts}
+                        {items.contacts}
                       </span>
                     </div>
                   </div>
@@ -65,7 +67,7 @@ function SellersAddress({ children, info }) {
                   </Link>}
 
 
-                  <Link href='/address/SellersAddress'>
+                  <Link href='/seller/SellersAddress'>
                     <a>
                       <li
                         className={toggleState === 2 ? tabs : styleTabs.tabs}
@@ -87,8 +89,8 @@ function SellersAddress({ children, info }) {
                   <div
                     className={toggleState === 2 ? content : styleTabs.content}
                   >
-                    {info.address}
-                    {info.work_schedule}
+                    {items.address}
+                    {items.work_schedule}
 
                   </div>
                 </div>

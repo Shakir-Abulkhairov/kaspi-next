@@ -7,11 +7,25 @@
 .products__block {
   display: flex;
 }
-
+.left{
+  width:25%;
+}
 .block__inner {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   max-width: 71%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .left{
+    width: 100%;
+  }
+  .electronics_left{
+   display: none;
+  }
+  .block__inner{
+    max-width:100%;
+  }
 }

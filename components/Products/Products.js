@@ -31,7 +31,7 @@ function Products({ products, handleAddCard, handleChangeTotalPrice }) {
                             <div className={style.card__price_text}>Цена</div>
                             <div className={style.card__price}>{products.price}₸</div>
                         </li>
-                        <button onClick={() => handlerAddToCart(products)} className={style.button__add}>Добавить</button>
+                        <button onClick={() => handlerAddToCart(products)} className={style.button__add}>В корзину</button>
                     </ul>
 
                 </div>

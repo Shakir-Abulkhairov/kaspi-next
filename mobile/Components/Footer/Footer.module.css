@@ -1,0 +1,34 @@
+.footer{
+  width: 100%;
+  bottom: 2.12298682284041vw;
+  z-index: 101;
+  position: fixed;
+  height: 11vh;
+  padding: 3.439239vw;
+  border-top: 2px solid #e5e5e5;
+  background-color: #fff;
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container{
+  max-width:83vw;
+  margin: 0 auto;
+}
+.icon{
+  width: 6vw;
+  height: 6vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icon__route{
+  width: 100%;
+}
+.icon__text{
+  font-size: 1.8vh;
+  margin-top: 0.36603221083455345vw;
+}

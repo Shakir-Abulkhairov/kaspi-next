@@ -1,5 +1,5 @@
 .container{
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
 }
 .bloc__tabs {
@@ -107,4 +107,24 @@
   margin: 0 auto;
 }
 
-/*table*/
+/*empty review*/
+.empty_review__wrapper{
+  padding: 26px 20px;
+  display: flex;
+  align-items: center;
+}
+.empty_review__icon{
+  width: 100px;
+  height: 100px;
+  background: url('../../public/image/ocr.jpg')  ;
+  display:block;
+  margin-right: 21px;
+}
+.empty_review__text{
+  display: inline-block;
+  font-size: 17px;
+  color: #999;
+  font-weight: 400;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;;
+}
+

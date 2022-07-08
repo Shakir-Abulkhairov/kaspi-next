@@ -18,7 +18,7 @@ function Sellers() {
 
       {sellers && <div className={style.content}>
         <div className={style.sellers__info}>
-          <Link href='/address/SellersAddress'>
+          <Link href='/seller/SellersAddress'>
             <a>
               <div>
                 {sellers.name}

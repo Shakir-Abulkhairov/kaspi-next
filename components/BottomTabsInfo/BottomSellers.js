@@ -26,7 +26,6 @@ function BottomSellers({ name, electronics }) {
   const checkTab = (tab) => {
     return tab ? true : false
   }
-
   //styles
   const tabs = `${style.tabs} ${style.active__tabs}`;
   const content = `${style.content} ${style.active__content}`;
@@ -74,7 +73,20 @@ function BottomSellers({ name, electronics }) {
             className={toggleState === 2 ? content : style.content}
           >
             <h2>Отзывы {name}</h2>
-            <Reviews data={electronics.user_reviews} />
+            {
+              electronics.user_reviews.length !== 0
+                ? <Reviews data={electronics.user_reviews} />
+                : <div className={style.empty_review__wrapper}>
+                  <div className={style.empty_review__shell}>
+                    <span className={style.empty_review__icon}> </span>
+                  </div>
+                  <div className={style.empty_review__shell}>
+                    <span className={style.empty_review__text}>
+                      Этот товар пока не получил отзывов от покупателей. После покупки этого товара Вы сможете оценить его и оставить отзыв.
+                    </span>
+                  </div>
+                </div>
+            }
           </div>}
           {/*     Characteristics     */}
 

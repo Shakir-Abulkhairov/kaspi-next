@@ -8,8 +8,6 @@
   display: flex;
   text-align: left;
   flex-wrap: wrap;
-  max-height: 15em;
-  overflow-y: scroll;
 }
 
 .city__link {
@@ -20,6 +18,16 @@
 
 }
 
-.active {
-  color: #f14635;
+.active a{
+  display: inline-block;
+  background: #ffd300;
+  padding: 0px 3px;
+  color : #000;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .block__link {
+    max-height: 15em;
+    overflow-y: scroll;
+  }
 }

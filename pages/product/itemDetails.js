@@ -23,54 +23,57 @@ const ItemDetails = ({ electronics, bodyBottom }) => {
   }
   return (
     <div className={style.wrapper}>
-      <div className={style.itemDetails}>
-        <div className={style.itemDetails__inner}>
-          <div className={style.itemDetails__inner__left}>
-            <div className={style.itemDetails__inner__left__item}>
-              <div className={style.imgBlock}>
-                <div className={style.slider__main__block}>
-                  <div className={style.slider__img} onClick={handleSetActive}>
-                    <img src={electronics.image[slider]} />
-                  </div>
-                  <div className={style.text}>Чтобы увеличить, нажмите на картинку</div>
-                  {/* <Image width="100%" height="100%" layout="responsive" objectFit="contain" className={style.img} src={electronics.image[slider]} alt="Card image cap" /> */}
-                  <div className={style.slider__block}>
-                    {
-                      electronics.image.map((img, i) => <div key={i} className={`${style.slider} ${slider == i ? style.active : ""}`} onClick={() => handleClickSlider(i)}> <img className={style.img} src={img} alt="Card image cap" /></div>)
-                    }
-                    {isAtcive &&
-                      <Modal toggleVisiblePopupClose={handleSetDisabled} >
-                        <SliderModal img={electronics.image} slider={slider} />
-                      </Modal>
-                    }
+      <div className='container'>
+        <div className={style.itemDetails}>
+          <div className={style.itemDetails__inner}>
+            <div className={style.itemDetails__inner__left}>
+              <div className={style.itemDetails__inner__left__item}>
+                <div className={style.imgBlock}>
+                  <div className={style.slider__main__block}>
+                    <div className={style.slider__img} onClick={handleSetActive}>
+                      <img src={electronics.image[slider]} />
+                    </div>
+                    <div className={style.text}>Чтобы увеличить, нажмите на картинку</div>
+                    {/* <Image width="100%" height="100%" layout="responsive" objectFit="contain" className={style.img} src={electronics.image[slider]} alt="Card image cap" /> */}
+                    <div className={style.slider__block}>
+                      {
+                        electronics.image.map((img, i) => <div key={i} className={`${style.slider} ${slider == i ? style.active : ""}`} onClick={() => handleClickSlider(i)}> <img className={style.img} src={img} alt="Card image cap" /></div>)
+                      }
+                      {isAtcive &&
+                        <Modal toggleVisiblePopupClose={handleSetDisabled} >
+                          <SliderModal img={electronics.image} slider={slider} />
+                        </Modal>
+                      }
+                    </div>
                   </div>
                 </div>
+
+              </div>
+            </div>
+            <div className={style.itemDetails__inner__right}>
+              <div className={style.title}>
+                {electronics.name}
+              </div>
+              <div className={`${style.rating} ${style.bottom_margin}`}>
+                <RaitingStar data={electronics.rating.rate} /> <span className={style.description_span}>({electronics.rating.count} отзыва) </span>
+              </div>
+              <div className={`${style.price} ${style.bottom_margin}`}>
+                <div className={style.price__header}>Цена</div>
+                <div className={style.price_content}>{electronics.price} ₸</div>
               </div>
 
+              <div className={style.description}>
+                <div dangerouslySetInnerHTML={{ __html: electronics.info }}></div>
+              </div>
+              <Link href="/product">
+                <a className={style.link}>
+                  ← Назад
+                </a>
+              </Link>
             </div>
-          </div>
-          <div className={style.itemDetails__inner__right}>
-            <div className={style.title}>
-              {electronics.name}
-            </div>
-            <div className={`${style.rating} ${style.bottom_margin}`}>
-              <RaitingStar data={electronics.rating.rate} /> <span className={style.description_span}>({electronics.rating.count} отзыва) </span>
-            </div>
-            <div className={`${style.price} ${style.bottom_margin}`}>
-              <div className={style.price__header}>Цена</div>
-              <div className={style.price_content}>{electronics.price} ₸</div>
-            </div>
-
-            <div className={style.description}>
-              {electronics.info.map((item, i) => <div key={i}>{item}</div>)}
-            </div>
-            <Link href="/product">
-              <a className={style.link}>
-                ← Назад
-              </a>
-            </Link>
           </div>
         </div>
+
       </div>
       <BottomSellers name={electronics.name} electronics={electronics} />
     </div>

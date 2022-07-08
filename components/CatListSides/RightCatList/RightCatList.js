@@ -8,26 +8,28 @@ function RightCatList({ category }) {
         <h2 className={style.category_header}>{category.name}</h2>
         <div >
           {
-            category.subcat_arr.map((subcat) => {
-              return (
-                <div key={subcat.id}>
-                  <ul className={style.subcat_ul}>
-                    <span className={style.sub_name}>{subcat.name}</span>
-                    {
-                      subcat.subcatProduct_arr.map((subcat) => {
+            category.map(item => {
+              return item.subcat_arr.map((subcat) => {
+                return (
+                  <div key={subcat.id}>
+                    <ul className={style.subcat_ul}>
+                      <span className={style.sub_name}>{subcat.name}</span>
+                      {
+                        subcat.subcat_arr.map((subcat) => {
 
-                        return (
-                          <Link key={subcat.id} href='/product'>
-                            <a>
-                              <li className={style.subcat_li}>{subcat.name}</li>
-                            </a>
-                          </Link>
-                        )
-                      })
-                    }
-                  </ul>
-                </div>
-              )
+                          return (
+                            <Link key={subcat.id} href='/product'>
+                              <a>
+                                <li className={style.subcat_li}>{subcat.name}</li>
+                              </a>
+                            </Link>
+                          )
+                        })
+                      }
+                    </ul>
+                  </div>
+                )
+              })
             })
           }
         </div>

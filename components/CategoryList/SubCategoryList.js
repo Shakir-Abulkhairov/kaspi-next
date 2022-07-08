@@ -2,7 +2,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import style from './CategoryList.module.css';
 
-function SubCategoryList({ subcat, saveOpen, saveChange }) {
+function SubCategoryList({ subcat }) {
+
   const [toggle, setToggle] = useState(null);
   let handleToggle = (id) => {
     if (toggle === id) {
@@ -10,7 +11,6 @@ function SubCategoryList({ subcat, saveOpen, saveChange }) {
       return false
     }
     setToggle(id)
-    saveChange()
   }
   return (
     <div key={subcat.id} className={style.sub__wrapper}>
@@ -18,13 +18,13 @@ function SubCategoryList({ subcat, saveOpen, saveChange }) {
       <ul>
         <div className={style.sub__name}>{subcat.name} <span className='sub__count'>({subcat.count})</span></div>
         {toggle &&
-          subcat && subcat.subcatProduct_arr.map((subcat) => {
+          subcat && subcat.subcat_arr.map((sub) => {
             return (
-              <div key={subcat.id}>
+              <div key={sub.id}>
                 <li className={style.subcat__links}>
                   <Link href={'/product'}>
                     <a>
-                      {subcat.name}
+                      {sub.name}
                     </a>
                   </Link>
                 </li>
@@ -37,5 +37,6 @@ function SubCategoryList({ subcat, saveOpen, saveChange }) {
     </div>
   )
 }
+
 
 export default SubCategoryList

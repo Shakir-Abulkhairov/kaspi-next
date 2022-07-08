@@ -12,12 +12,10 @@ import { addCard, addTotalCount } from '../../redux/slices/cart';
 
 function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
   const dispatch = useDispatch();
-
   // useEffect(() => {
   //   dispatch(addProdAc(catProd));
   // }, []);
-
-  const items = useSelector((state) => state.addProd.items);
+  // const items = useSelector((state) => state.addProd.items);
 
   const handleAddCard = (card) => {
     dispatch(addCard(card));
@@ -36,12 +34,15 @@ function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
 
 
 
+
   const paginate = pageNumber => setCurrentPage(pageNumber)
   return (
     <div className={style.wrapper}>
       <div className="container">
         <div className={style.products__block}>
-          <LeftCatList key={category.id} category={category} />
+          <div className={cn(style.left, style.electronics_left)}>
+            <LeftCatList key={category.id} category={category} />
+          </div>
           <div className={style.block__inner}>
             {
               currentProduct && currentProduct.filter((val) => {
@@ -64,7 +65,7 @@ function Electronics({ catProd, setSearchTerm, searchTerm, category }) {
           </div>
 
         </div>
-        <Pagination currentPage={currentPage} productPerPage={productPerPage} totalCount={items.length} paginate={paginate} />
+        <Pagination currentPage={currentPage} productPerPage={productPerPage} totalCount={catProd.length} paginate={paginate} />
       </div>
 
     </div>

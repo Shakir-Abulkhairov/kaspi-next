@@ -9,7 +9,7 @@ import IndexMobile from '../mobile/Pages';
 
 
 function MyApp({ Component, pageProps, product, cities, category, isMobile }) {
-  console.log(isMobile)
+
   const [confirm, setConfirm] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps, product, cities, category, isMobile }) {
                 setSearchTerm={setSearchTerm}>
 
                 <Component {...pageProps} searchTerm={searchTerm}
-                  setSearchTerm={setSearchTerm} category={category} />
+                  setSearchTerm={setSearchTerm} category={category} isMobile={isMobile} />
               </Layout>
             )
             : (
@@ -43,8 +43,8 @@ function MyApp({ Component, pageProps, product, cities, category, isMobile }) {
   )
 }
 MyApp.getInitialProps = async (appContext) => {
-  const UA = appContext.ctx.req.headers['user-agent'];
-  const isMobile = Boolean(UA.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i))
+  const UA = appContext.ctx.req?.headers['user-agent'];
+  const isMobile = Boolean(UA?.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i))
   // calls page's `getInitialProps` and fills `appProps.pageProps`
   const appProps = await App.getInitialProps(appContext);
 

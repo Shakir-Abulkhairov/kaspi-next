@@ -10,9 +10,6 @@ const Header = ({ toggleVisibleCities }) => {
             <img src='/image/mobile/location.png' />
           </span>
           <div className={`${style.search_input} ${style.input}`}>Поиск в Магазине</div>
-          {/* {
-            showCities && <Modal />
-          } */}
         </div>
       </div>
     </div>

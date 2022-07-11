@@ -1,9 +1,8 @@
 .footer{
   width: 100%;
-  bottom: 2.12298682284041vw;
+  bottom: 0vh;
   z-index: 101;
   position: fixed;
-  height: 11vh;
   padding: 3.439239vw;
   border-top: 2px solid #e5e5e5;
   background-color: #fff;
@@ -29,6 +28,6 @@
   width: 100%;
 }
 .icon__text{
-  font-size: 1.8vh;
+  font-size: 1.8vw;
   margin-top: 0.36603221083455345vw;
 }

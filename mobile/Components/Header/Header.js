@@ -1,7 +1,17 @@
 import Modal from '../Modal/Modal';
 import style from './Header.module.css';
-const Header = ({ toggleVisibleCities }) => {
+const Header = ({ toggleVisibleCities, router }) => {
 
+  const changeLayout = () => {
+    switch (router) {
+      case '/':
+        return <div className={`${style.search_input} ${style.input}`}>Поиск в Магазине</div>;
+      case '/cart':
+        return <div className={`${style.search_input} ${style.input}`}>cart</div>
+      default:
+        break;
+    }
+  }
   return (
     <div className={style.container}>
       <div className={style.header}>
@@ -9,7 +19,7 @@ const Header = ({ toggleVisibleCities }) => {
           <span className={style.icon_location} onClick={toggleVisibleCities} >
             <img src='/image/mobile/location.png' />
           </span>
-          <div className={`${style.search_input} ${style.input}`}>Поиск в Магазине</div>
+          {changeLayout()}
         </div>
       </div>
     </div>

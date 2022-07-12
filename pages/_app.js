@@ -5,7 +5,7 @@ import App from 'next/app'
 import '../styles/globals.css'
 import { Provider } from 'react-redux';
 import LayoutMobile from '../mobile/Components/Layout/LayoutMobile';
-import IndexMobile from '../mobile/Pages';
+
 
 
 function MyApp({ Component, pageProps, product, cities, category, isMobile }) {
@@ -35,7 +35,10 @@ function MyApp({ Component, pageProps, product, cities, category, isMobile }) {
               </Layout>
             )
             : (
-              <IndexMobile />
+              <LayoutMobile cities={cities}>
+                <Component {...pageProps} searchTerm={searchTerm}
+                  setSearchTerm={setSearchTerm} category={category} isMobile={isMobile} />
+              </LayoutMobile>
             )
         }
       </Provider>

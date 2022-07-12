@@ -1,0 +1,22 @@
+.wrapper{
+  padding:21vw 0 2vw 0;
+}
+.container {
+  max-width: 97vw;
+  margin: 0 auto;
+}
+
+.empty_img{
+  display:block;
+  margin: 0 auto;
+  max-width:20vw;
+}
+.empty_img img{
+  width:100%;
+}
+.empty_text{
+  margin-top: 3vh;
+  text-align: center;
+  font-size: 4vw;
+  font-weight: 500;
+}

@@ -1,11 +1,21 @@
 import { Promo, Services, KaspiShop, SubHeader } from '../components';
+import SliderProducts from '../mobile/Components/sliderProducts/SliderProducts';
 
-export default function Home({ product }) {
+
+export default function Home({ product, isMobile }) {
 
   return (
     <>
-      <Promo />
-      <KaspiShop product={product} />
+      {
+        !isMobile
+          ? (
+            <>
+              <Promo />
+              <KaspiShop product={product} />
+            </>
+          )
+          : <SliderProducts product={product} />
+      }
     </>
   )
 }

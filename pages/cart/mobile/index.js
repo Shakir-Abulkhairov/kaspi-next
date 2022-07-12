@@ -1,8 +1,27 @@
-import React from 'react'
+import style from './CartMobile.module.css';
 
-function CartMobile() {
+function CartMobile({ prod }) {
+
   return (
-    <div>Cart Mobile</div>
+    <div className={style.wrapper}>
+      <div className={style.container}>
+
+        {
+          prod.length
+            ? <div>товар</div>
+            : <div className={style.empty}>
+              <div className={style.empty_img}>
+                <img src='image/empty.png' />
+              </div>
+              <div className={style.empty_text}>
+                Ваша корзина пуста
+              </div>
+
+            </div>
+        }
+
+      </div>
+    </div>
   )
 }
 

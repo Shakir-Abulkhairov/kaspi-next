@@ -1,0 +1,22 @@
+.wrapper{
+  padding: 21vw 0 2vw 0;
+}
+.container{
+  max-width: 97vw;
+  margin: 0 auto;
+}
+.favorite{
+  max-width: 35vw;
+  margin: 0 auto;
+  text-align: center;
+}
+.favorite__img{
+  max-width :36vw;
+}
+.favorite__img img{
+  width : 100%;
+}
+.favorite__text{
+  font-size: 3.5vw;
+  font-weight: bold;
+}

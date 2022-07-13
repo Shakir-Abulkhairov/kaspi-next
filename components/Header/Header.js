@@ -80,6 +80,7 @@ function Header() {
                 <Link href="/bizkredit" ><a className={style.header__item}>Бизнес</a></Link>
                 <Link href="/kaspiGuide" ><a className={style.header__item}>Kaspi Гид</a></Link>
                 <Link href="/cart" ><a className={cn(style.header__item, style.last__item)}> <Image src='/image/bag.svg' width={25} height={25} />{products ? <span className={style.round}>{products}</span> : ''}</a></Link>
+                <Link href="/cart" ><a className={cn(style.header__item, style.last__item)}> <Image src='/image/favorite.svg' width={20} height={20} />{products ? <span className={style.round}>{products}</span> : ''}</a></Link>
               </nav>
             </div>
           </div>

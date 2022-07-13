@@ -1,0 +1,56 @@
+
+.icon_location {
+  position: absolute;
+  top: 1vw;
+  left: -16%;
+  background: url(../../../public/image/mobile/location.png) center center/cover no-repeat;
+  width: 9vw;
+  display: inline-block;
+  height: 9vw;
+}
+
+.icon_back {
+  position: absolute;
+  top: 2vw;
+  left: -16%;
+  background: url(../../../public/image/mobile/back.svg) center center/cover no-repeat;
+  width: 6vw;
+  display: inline-block;
+  height: 6vw;
+}
+.search_input {
+  flex: 1;
+  height: 10.667vw;
+  border: 1px solid #f0f0f0;
+  border-radius: 2.4vw;
+  padding-left: 2.667vw;
+  padding-right: 7.333vw;
+
+  color: #4a4a4a;
+  background: #fff;
+  text-shadow: transparent 0 0 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+
+.input {
+  border-color: #f0f0f0;
+  background: #f0f0f0;
+  font-size: 4.267vw;
+  color: #a8a8a8;
+  padding-left: 10.667vw;
+}
+
+.top_block__text{
+  color: #a8a8a8;
+  text-align: center;
+  line-height: 10.133vw;
+  font-size: 4.533vw;
+}
+.center{
+  margin: 0 auto;
+  color: #000;
+  font-weight: 500;
+}

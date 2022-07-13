@@ -60,44 +60,16 @@
     position: relative;
     padding: 0 !important;
     z-index: 3;
+    
     margin: 0 9.6vw;
 }
-.icon_location {
-  position: absolute;
-  top: 0;
-  left: -16%;
-
-  /* width: 70px; */
-  width: 11vw;
-  /* height: 70px; */
-}
-.icon_location img{
-  width: 100%;
-}
 
 
 
-.search_input {
-  flex: 1;
-  height: 10.667vw;
+.top_block {
   line-height: 10.133vw;
-  border: 1px solid #f0f0f0;
-  border-radius: 2.4vw;
-  padding-left: 2.667vw;
-  padding-right: 7.333vw;
   font-size: 4.533vw;
-  color: #4a4a4a;
-  background: #fff;
-  text-shadow: transparent 0 0 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
-.input {
-  border-color: #f0f0f0;
-  background: #f0f0f0;
-  color: #a8a8a8;
-  padding-left: 10.667vw;
-  font-size: 4.267vw;
-}
+
+
 

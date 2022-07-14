@@ -15,20 +15,13 @@ function Header() {
 
   const renderDropDown = () => {
     return (
-      <div className={style.block}>
-        <div className={style.likes__list} >
-          <h2 className='title'>Сервисы Kaspi</h2>
-          <div>
+
+      <div className={style.header__topbar_overflow}>
+        <div className={style.topbar__wrapper}>
+          <div className={style.topbar__wrapper_content}>
             <Link href='/'>
               <a>
                 магазин
-              </a>
-            </Link>
-          </div>
-          <div>
-            <Link href='/'>
-              <a>
-                платежи
               </a>
             </Link>
           </div>
@@ -47,45 +40,29 @@ function Header() {
     <>
       <div className={style.header}>
         <div className={style.container}>
-          <div className={style.header__inner}>
-            <div className={style.logo}>
-              <Link href="/" ><a ><Image src='https://kaspi.kz/img/Logo.svg' width={141} height={33} /></a></Link>
-            </div>
-            <div className={style.header__burger} onClick={changeActive}>
-              <span className={style.burger__item}></span>
-              <span className={style.burger__item}></span>
-              <span className={style.burger__item}></span>
-            </div>
-            <div className={style.header__inner_block}>
-              <nav className={cn(style.nav, active ? style.nav__active : '')}>
-                <span className={cn(style.dropdown_content, style.header__item)}>
-                  <span onMouseMove={handleHover} onMouseLeave={handleLeave}>Клиентам{dropDown}</span>
-                  <div className={style.dropDown__link}>
-                    <div>
-                      <Link href='/'>
-                        <a>
-                          магазин
-                        </a>
-                      </Link>
-                    </div>
-                    <div>
-                      <Link href='/'>
-                        <a>
-                          платежи
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
-                </span>
-                <Link href="/bizkredit" ><a className={style.header__item}>Бизнес</a></Link>
-                <Link href="/kaspiGuide" ><a className={style.header__item}>Kaspi Гид</a></Link>
-                <Link href="/cart" ><a className={cn(style.header__item, style.last__item)}> <Image src='/image/bag.svg' width={25} height={25} />{products ? <span className={style.round}>{products}</span> : ''}</a></Link>
-                <Link href="/cart" ><a className={cn(style.header__item, style.last__item)}> <Image src='/image/favorite.svg' width={20} height={20} />{products ? <span className={style.round}>{products}</span> : ''}</a></Link>
-              </nav>
-            </div>
-          </div>
+          <Link href="/" ><a ><span className={style.logo}><img src='https://kaspi.kz/img/Logo.svg' /></span></a></Link>
+          <nav className={cn(style.nav, active ? style.nav__active : '')}>
+
+            <li >
+              <Link href="/" ><a className={style.header__item}>Клиентам</a></Link>
+            </li>
+            <li>
+              <Link href="/bizkredit" ><a className={style.header__item}>Бизнес</a></Link>
+            </li>
+            <li>
+              <Link href="/kaspiGuide" ><a className={style.header__item}>Kaspi Гид</a></Link>
+            </li>
+            <li>
+              <Link href="/cart" ><a className={cn(style.header__item, style.last__item, style.img)}> <img src='/image/cart.svg' />{products ? <span className={style.round}>{products}</span> : ''}</a></Link>
+            </li>
+            <li>
+              <Link href="/favorite" ><a className={cn(style.header__item, style.last__item, style.img)}><img src='/image/favorite.svg' /></a></Link>
+            </li>
+          </nav>
+          <div></div>
         </div>
       </div>
+
 
     </>
   )

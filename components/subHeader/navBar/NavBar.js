@@ -14,7 +14,7 @@ function NavBar({ product }) {
                 product && product.map((item, i) => {
                   return (
                     <div className={style.nav__item} key={i}>
-                      <Link href={`/cat/${item.id}`}>
+                      <Link href={`/cat/${item.mt_prod_cat}`}>
                         <a className={style.nav__link}>
                           <span className={style.nav__text} >
                             {item.name}
@@ -31,9 +31,7 @@ function NavBar({ product }) {
         </div>
 
       </div>
-      <div className={style.sticky__box}>
 
-      </div>
     </>
   )
 }

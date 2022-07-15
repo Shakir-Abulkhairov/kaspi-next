@@ -52,11 +52,11 @@ function Header() {
             <li>
               <Link href="/kaspiGuide" ><a className={style.header__item}>Kaspi Гид</a></Link>
             </li>
-            <li>
-              <Link href="/cart" ><a className={cn(style.header__item, style.last__item, style.img)}> <img src='/image/cart.svg' />{products ? <span className={style.round}>{products}</span> : ''}</a></Link>
+            <li className={style.tooltip}>
+              <Link href="/cart" ><a className={cn(style.header__item, style.last__item, style.img)} > <img src='/image/cart.svg' />{products ? <span className={style.round}>{products}</span> : ''}<span className={style.tooltiptext}>Корзина</span></a></Link>
             </li>
-            <li>
-              <Link href="/favorite" ><a className={cn(style.header__item, style.last__item, style.img)}><img src='/image/favorite.svg' /></a></Link>
+            <li className={style.tooltip}>
+              <Link href="/favorite" ><a className={cn(style.header__item, style.last__item, style.img)} ><img src='/image/favorite.svg' /><span className={style.tooltiptext}>Избранное</span></a></Link>
             </li>
           </nav>
           <div></div>

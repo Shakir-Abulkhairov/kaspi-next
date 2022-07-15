@@ -33,6 +33,14 @@
 .right {
   width: 71%;
 }
+.right_content {
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+.cat__block{
+  margin-right: 14px;
+}
 @media (max-width: 768px) {
   .right{
     display:none;

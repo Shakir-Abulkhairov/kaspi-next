@@ -1,3 +1,72 @@
 .wrapper{
   margin-top: 10px;
 }
+
+.main_list {
+  list-style-type: none;
+  padding-left: 30px;
+  margin: 0;
+  position: relative;
+}
+.li ,.last_subcat{
+  position: relative;
+  margin-bottom: 10px;
+  left: -18px;
+  padding-left: 10px;
+  margin-right: -10px;
+  cursor: pointer;
+}
+.last_subcat{
+  padding-left: 31px;
+}
+.last_subcat::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 1px solid #e5e5e5;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  left: 16px;
+  top: 8px;
+}
+.last_subcat:hover::before{
+  border: 1px solid #000;
+}
+.active{
+  display: block;
+}
+.disabled{
+  display: none;
+}
+.toggle_visible::before,
+.toggle_visible_down::before ,
+.main::before{
+  content: '';
+  display: block;
+  position: absolute;
+  border: 1px solid #e5e5e5;
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+  left: 8px;
+  top: 2px;
+
+}
+.main::before{
+  left: -14px;
+  top: -1px;
+}
+
+
+
+.toggle_visible::before{
+  background: url('https://resources.cdn-kaspi.kz/shop/front/sa/stable/desktop/images/small-rounded-arrow.png')-1px -1px;
+}
+.toggle_visible_down::before{
+  background: url('https://resources.cdn-kaspi.kz/shop/front/sa/stable/desktop/images/small-rounded-arrow.png')-23px -23px;
+}
+
+.red{
+  color: red;
+}

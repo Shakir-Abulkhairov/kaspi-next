@@ -22,7 +22,7 @@ function ItemDetails({ data }) {
 export async function getServerSideProps({ query }) {
 
   try {
-    const response = await fetch(`http://qoldan-dev.com/api/market/mt_prod_cat/get_cat_list_info_for_parent?id=${query.id}`);
+    const response = await fetch(`http://qoldan-dev.com/api/market/mt_prod_cat/get_cat_list_info_for_parent_arr?id=${query.id}`);
     const body = await response.json();
 
     if (!body) {
